@@ -1,0 +1,163 @@
+---
+title: "Chapter 3 Algebra Continued"
+author: "Media Data Science"
+date: "April 25, 2019"
+output: html_document
+---
+
+##Functions and more 
+
+A function is a mathematical relationship between a set of inputs and outputs. Functions are subject to constraints such as a range or set of possible inputs in addition to a range of possible outputs. Functions are universally denoted as f(x). In some instances, f(x)= is interchangable with y=, it really just depends on the operations at hand. 
+
+In our previous lessons, we examined mechanics but going forward, mecahnics will be a tool to work through more concrete concepts and their applications. 
+
+The idea of a function comes from a relation. A relation is simply a set of ordered pairs. Ordered pairs are represented with the notation (x,y) and typically when we have a set of ordered pairs, we require one value of x for each value of y. Lets look at some exampes:
+
+$$
+(-1, 0),(0,-3),(2, -3),(3,0), (4, 5)\\
+{x:}{-1,0,2,3,5}\\
+{y:}{0,-3,0,5}
+$$
+
+We split up our ordered pairs into their x components and y components. Notice in the y components, we omitt the additional -3. We have two distinct x values (0 and 2) that yield the y value of -3, however, we would no longer have a relation if the same x value yields two different y values such as the example below: 
+
+$$
+(6,10),(-7,3),(0,4),(6, -4)
+$$
+
+Without looking at the x and y components seperate, we can see that the x value of 6 yields a y value of 10 and -4. This contradicts the definition of a relation. 
+
+This idea can be extended to functions in general. 
+
+Lets look at some examples of functions. Notice how we will re-write y as f(x). In general terms, the variable inside of the f() tells us what the input variable is going to be. 
+
+$$
+y=x^2\\
+f(x)=x^2
+$$
+
+Lets use our function to generate some output for x=2, x=100,and x=-0.12:
+
+$$
+f(x)=x^2\\
+f(2)=2^2=4\\
+f(100)=100^2=10000\\
+f(-0.12)=(-0.12)^2=0.0144
+$$
+
+Functions do take a shape. In this case, this function looks like a U shape. Each output we generated above is a point on the line along the vertical axis for every value of x on the horizontal axis. 
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+eq = function(x){x*x}
+curve(eq, from=-10, to=10, xlab="x", ylab="y")
+```
+
+By the way, we can visually see if a graph of something is a function or not
+https://en.wikipedia.org/wiki/Vertical_line_test
+
+We can also generate output in terms of other variables. For example, what if we wanted to evalue something along the lines of x=t+1 . We would simply plug in t+1 
+
+$$
+f(x)=x^2\\
+f(t+1)=(t+1)^2\\
+f(t+1)=(t+1)(t+1)\\
+f(t+1)=t^2+2t+1 
+$$
+
+By the way, I know we did not cover how to do reverse factoring but you can find more information about FOIL here https://en.wikipedia.org/wiki/FOIL_method
+
+
+How do we graph functions without using software? The easiest way is to generate an x y table to create a set of ordered pairs where x is your input and y is your output. We can choose any values of x but typically we want to pick values sequentially (including negatives)
+
+$$
+f(x)=x^2+2\\
+f(-2)=(-2)^2+2=6\\
+f(-1)=(-1)^2+2=3\\
+f(0)=(0)^2+2=2\\
+f(1)=(1)^2+2=3\\
+f(2)=(2)^2+2=6
+$$
+
+We generated the following ordered pairs 
+
+$$
+(-2,6)(-1,3),(0,2),(1,3),(2,6)
+$$
+
+Try to plot this function yourself using classic pen and paper. There are more things to consider when graphing functions since they will not always be so simple as this example but those complicated examples will be for a later time. 
+
+We will now bring our attention to piecewise functions. They are a different type of function that appear quite a bit in probability. Itis best to get familiar with this sort of notation now. A piecewise function is a function that is broken into pieces depending on the defined value of x.
+
+$$
+f\left( x \right) =|x|=\begin{cases} x\quad if\quad x\ge 0 \\ -x\quad if\quad x<0 \end{cases}
+$$
+
+The absolute value function is broken into two pieces. The first piece is x when x is greater than or equal to zero. The second piece is -x when x is less than 0. 
+
+Now that we have introduced the framework of functions, we need to talk about the limitations on functions. Functions could have no limitations or be limited to a certain set of outputs/inputs. These ideas are known as the domain and range. 
+
+The domain is definied as the set of all possible input values for some f(x) and the range is the set of all possible y values we can obtain as outputs from f(x). 
+
+Finding the domain and range of a function requires some knowledge of elementary rules. Some of the most popular rules for functions are:
+1. The denominator of a fraction cannot be 0
+2. The inside of a square root cannot be less than 0 
+
+Lets look at some examples of how to find the domain while introducing the idea of interval notation. Finding the range is not as straight forward because it requires more advanced techniques to find the end behavior of a function. 
+$$
+g(x)=\frac{x+3}{x^2+3x-10}
+$$
+
+For this problem, we can see that it is a fraction. We know that you can't have zero on the bottom of the fraction so we want to find values of x that would make the denominator zero. Lets take the expression on the denominator and set it equal to zero and solve for x. In order to solve this polynomial, we need to split it up into its two factors. You want to pick two numbers whose product equal -10 and whose sum equal +3. 
+
+$$
+x^2+3x-10=0\\
+(x+5)(x-2)=0\\
+x=-5\\
+x=2
+$$
+
+We have determined that th two values of x which make the denominator zero are -5 and 2. Therefore, our domain is evvery value of x that is not -5 and not 2. We can express this using interval notation (top) or inequalities (bottom):
+
+$$
+domain\quad \{ x:(-\infty ,\quad -5)\cup (-5,2)\cup (2,\infty )\} \\
+x<-5\ and\ -5<x<2\ and\ x>2
+$$
+
+If you read the above out loud, it says every x value from negative less than -5, every x value greater than -5 and less than 2, and every x value greater than 2. 
+
+Lets do a difficult problem: 
+
+$$
+f(x)=\frac{\sqrt(10x-5)}{x^2-16}
+$$
+
+We need to examine both the numerator and the denominator. We know that the inside of a square root cannot be less than 1 and the denominator cannot be zero. We need to consider these elements when finding the possible range of x values for this function. Lets start with the numerator. We want to see what values of x make the numerator less than zero, so we set up the following inequality using the expression inside the square root. 
+
+$$
+10x-5< 0\\
+10x<5\\
+x<5/10\\
+x<1/2\ or\ 0.5
+$$
+
+We see that any value of x less than or equal to 1/2, will make the numerator less than 0. Now lets analyze what values of x make the denominator equal to zero. 
+
+$$
+x^2-16=0\\
+(x-4)(x+4)=0\\
+x=-4\\
+x=-4
+$$
+
+We know that when x is -4 or 4, then the denominator is undefinied. When x is less than positive 1/2,then the numerator is undefinied. We need to put this information together to determine what values of x are possible for f(x) in this example. 
+It seems that any value from 1/2 less than 4 and any value greater than 4 definie this function. Lets express it in interval notation and inequalities. 
+
+$$
+domain\ {x:[\frac{1}{2},4)\cup(4, \infty)}\\
+\frac{1}{2}\le x <4\ and\ x>4
+$$
+In our interval notation, we use a square bracket [ to denote if a value is inclusive. We use ( to denote not inclusive. 
+
+
+
+
