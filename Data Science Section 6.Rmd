@@ -1,0 +1,121 @@
+---
+title: "Data Science Session 6"
+author: "Media Data Science"
+date: "June 18, 2019"
+output: html_document
+---
+
+#Chapter 6 Intro to Trig 
+
+##Introduction to Trig
+
+Our focus will now be applied to Trig. Here is your reading to get started on Trig: 
+https://github.com/vindication09/Data-Science-Mathematics/blob/master/trig_intro.pdf
+
+Trig is a branch of mathematics that studies the relationships between the sides lengths and angles within triangles. For our purposes, we want to get familiar with the unit circle, functions and their properties, angle measures, and identities. 
+
+The first thing we want to get familiar with is the conversion of common radians to degrees. We have the following table: 
+
+$$
+\begin{bmatrix} Degrees & Radians \\ 0 & 0 \\ 30 & \pi /6 \\ 45 & \pi /4 \\ 60 & \pi /3 \\ 90 & \pi /2 \\ 180 & \pi  \\ 270 & 3\pi /2 \\ 360 & 2\pi  \end{bmatrix}
+$$
+
+-Draw angles on whiteboard-
+
+These are typically the most common values we will be using to solve trig equations and re-write degrees in terms of radians or vice versa. In formal mathematics, we prefer to keep everything in terms of radians. 
+
+Lets examine some simple conversions in order to get comfortable with the notation without using the table:
+
+* Convert 90 degrees to radians by multiplying by pi/180
+
+$$
+90(\frac{\pi}{180})=\frac{90\pi}{180}=\frac{\pi}{2}
+$$
+* Convert 2pi radians to degrees by multiplying by 180/pi
+
+$$
+2\pi(\frac{180}{\pi})=2(180)=360
+$$
+
+Each radian is actually the angle formed by a triangle inscribed inside of a circle where x is the length on the x axis and y is the height. The angle is the angle between the origin and the point of elevation. Please see whiteboard 
+
+$$
+x=cos\theta\\
+y=sin\theta
+$$
+
+We can derive the other trig functions from both the definitions for x and y as follows: 
+
+$$
+tan\theta=\frac{y}{x}=\frac{sin\theta}{cos\theta}\\
+sec\theta=\frac{1}{cos\theta}\\
+csc\theta=\frac{1}{sin\theta}\\
+cot\theta=\frac{x}{y}=\frac{cos\theta}{sin\theta}
+$$
+
+We do not need to know how these are derived since it is outside the scope of what we are trying to do but its best to know these identities in order to solve upcoming problems. 
+
+lets add the sin and cosine values of the radians we displayed in the table above 
+
+$$
+\begin{bmatrix} Degrees & Radians & Sin & cos \\ 0 & 0 & 0 & 1 \\ 30 & \pi /6 & 1/2 & \sqrt { 3 } /2 \\ 45 & \pi /4 & \sqrt { 2 } /2 & \sqrt { 2 } /2 \\ 60 & \pi /3 & \sqrt { 3 } /2 & 1/2 \\ 90 & \pi /2 & 1 & 0 \end{bmatrix}
+$$
+
+We can use these values to compute the values of other trig functions as follows. 
+
+Lets find the tangent of pi/6 . We know from our identity that tangent is the ratio of sin over cos and we know the values of sin over cos at pi/6 from our table! 
+
+$$
+tan(\frac{\pi}{6})=\frac{sin\frac{\pi}{6}}{cos\frac{\pi}{6}}=\frac{\frac{1}{2}}{\frac{\sqrt3}{2}}=\frac{1}{\sqrt3}=\frac{1(\sqrt3)}{\sqrt3(\sqrt3)}=\frac{\sqrt3}{3}
+$$
+
+We need to rationalize our result. This means not having the square root value in the denominator. To fix this we simply multiply the top and bottom of the fraction by  a radical 3. 
+
+## Are there more angles than the ones we have been shown? 
+
+Yes,there are. Lets look at how we can get other angles. 
+
+
+$$
+sin(5\pi/2)\\
+$$
+The trick is to see how an angle like this relates to one of the smaller angles. This is known as the reference angle. Angles that are larger than 90 degrees are coterminal angles, meaning they overlap with a reference angle. Finding the value is a simple as subtracting or adding 2pi until your angle is in quadrant 1 or between 0 and pi/2. Lets solve 
+
+5pi/2 is bigger than 90 degrees so we want to subtract a value of 2pi as needed
+
+$$
+1. \ sin(5\pi/2)\\
+\frac{5\pi}{2}-2\pi= \frac{5\pi}{2}-\frac{2\pi(2)}{1(2)}=\frac{5\pi-4\pi}{2}=\frac{\pi}{2}\\
+sin(5\pi/2)=sin(\pi/2)=1
+$$
+
+There are also values that you will simply need some computation software to compute. Of course there are things like double angle and half angle formulas to approximate things like 22.5 degrees but they are not needed for our purposes. 
+
+
+## Simple Right Triangle Trig 
+
+Perhaps in grade school, you have come across the phrase "Soh Cah Toa." It is meant to be a way for students to remember the relationship of the sides when and their corresponding trig funtions when it comes to right triangles. 
+
+Lets look at the whiteboard to identify the common names for the sides of the right triangle. 
+
+* Soh=Opp/Hyp
+
+* Cah=Adj/Hyp
+
+* Toa=Opp/Adj
+
+Some other properties about triangles is that the sum of angles is 180 degrees within a triangle. We also have a very special property called the triangle inequality which states that the sum of two sides of a triangle must be greater than or equal to the remaining sides. This is actually a critical property in mathematics that appears in the most advanced branches including the derivation of some machine learning algorithms. 
+
+Lets examine a simple problem:
+
+A ladder is leaning against the side of the building the side of the building , forming an angle of 60 degrees with the ground. if the foot of the ladder is 10m from the base of the building,how far up does the ladder reach? how long is the ladder? 
+
+Lets solve this on th white board 
+
+
+For HW, do the problems that we did not cover in the examples that are included in the link given at the start. Do everything before solving trig equations. We will do that for next session. 
+
+
+
+
+
