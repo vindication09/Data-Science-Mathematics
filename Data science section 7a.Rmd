@@ -1,0 +1,188 @@
+---
+title: "Data Science Section 7"
+author: "Media Data Science"
+date: "June 26, 2019"
+output: html_document
+---
+
+# Intro to Trig Continued 
+
+We will continue our discussion into the second part of our trig introduction. We are going to cover solving trig equations. The motivation behind solving trig equations is to solve for the angle theta given the value of one of the six trig identities. 
+
+One element that sets solving for trig equations apart from solving regular trig equations is the fact that unless specified, we will be solving for all relating angles within the unit circle. We will go through this concept on th whiteboard since it is something that is easier to grasp visually than conceptually. 
+
+Please see the full print out of the unit circle:
+https://github.com/vindication09/Data-Science-Mathematics/blob/master/unitcircle-letter.pdf
+
+Note: When reading the coordinates on the unit circle, they are read as (x,y) which we know is (cosx,sinx)
+
+lets solve a simple equation: 
+
+$$
+sin(x)=\frac{1}{2}
+$$
+
+We are trying to find the angle x, where sin(x) is 1/2. In other words, if you remember "soh"
+"cah" "toa", we need to find the angle where the opp side of a triangle is 1 and the hyp is 2. From our unit circle, this occurs when the angle is 60 degrees, or in radians pi/6. Within the unit circle, this is not the first and only place where sin(x) takes the value of 1/2. When the angle is 300 degrees or 5pi/6 radians, the sinx value is also 1/2. What about angles greater than 360? theoretically we can keep going around and around the unit circle and have infinite solutions. Since we are not given a domain for our angle, we express the answer as:
+
+$$
+x=\frac{\pi}{6}+2k\pi
+$$
+
+The way to read this answer is that k multiples of pi/6 is the solution set to sin(x)=1/2. 
+
+Lets try another 1. 
+
+Solve
+
+$$
+tan(x)=1
+$$
+
+We will need to call on our shorthand phrase to remember the relation of sides when it comes to tangent. Tangent is the ratio of sinx/cosx but when it comes to sides, tangent is opp over adjt. 
+If we consult the unit circle, then we can identify where the ratio of sinx/cosx is 1. This only occurs when the angle is 45 degrees or pi/4. We express our answer as follows: 
+
+$$
+x=\frac{\pi}{4}+k\pi
+$$
+
+Any angles that is k multiples of pi/4 is a solution for tan(x)=1. Do you notice something different? Why was sin(x) 2kpi multiples but tangent is kpi multiples. This is because the trig functions have different periods. Before we solve anymore equations, period and amplitude is an essential concept to understanding the trig funtions and their behavior. 
+
+# Plotting Trig Functions (Sinx and cosx)
+
+```{r message=FALSE, warning=FALSE}
+t=seq(0,10,0.1)
+
+library(ggplot2)
+
+y=sin(t)
+
+qplot(t,y,geom="path", xlab="", ylab="Sine wave")
+
+```
+
+The sinx function is a repetative wave as shown in the above plot,howver we are going to go through the process of plotting it from scratch. This will help our understanding much more than seeing a computer generated plot.
+
+Lets also take a look at the cosine function plot. 
+```{r warning=FALSE, message=FALSE}
+t=seq(0,10,0.1)
+
+library(ggplot2)
+
+y=cos(t)
+
+qplot(t,y,geom="path", xlab="", ylab="Sine wave")
+
+```
+
+
+We will be following the tutorial here: https://github.com/vindication09/Data-Science-Mathematics/blob/master/sincos.pdf
+
+We need to call upon our unit circle to get all the main values of theta from 0 to 2pi. 
+
+$$
+\begin{pmatrix} \theta \\ 0 \\ \pi/6 \\ \pi/4 \\ \pi/3  \\ \pi/2 \\
+2\pi/3 \\ 3\pi/4 \\ 5\pi/6 \\ \pi \\ 
+7\pi/6 \\ 5\pi/4 \\ 4\pi/3 \\ 3\pi/2\\
+5\pi/3 \\ 7\pi/3 \\ 11\pi/6 \\ 2\pi \end{pmatrix}
+$$
+
+
+
+These values of sinx will define our x axis. We will create our graph and plot each of these values as a tick mark. We will then go through the unit circle and demonstrate what the y value is for each. We will be using the whiteboard for this portion. Once we graph sinx we will repeat the process for cosx.
+
+Lets now examine some properties of sinx and cosx. 
+
+https://www.mathsisfun.com/algebra/amplitude-period-frequency-phase-shift.html
+
+Cosx and sinx are what's called periodic functions. Periodic functions are functions that return the same value at regular intervals. In our case, the sinx is a wave that hits the same values at regular intervals. 
+
+The general form of the sinx and cosx functions is: 
+
+$$
+y=Asin(B(x+C))+D\\
+Y=cos(B(x+C))+D
+$$
+* A is the amplitude, which is the height of the wave
+
+* The period is 2pi/B,which means that the function goes from one peak to the next (a full cycle)
+
+* The partition is period/4,which means the length between points on our x axis 
+
+* C is the phase shift (positive shifts to left , negative shifts to right)
+
+* D is the vertical shift 
+
+Lets try to plot a more advance sin fuction. We will only look at sin , since cos follows the exact same procedure. We will save other functions such as tangent, csc, cot for another time since the process for those functions differs slightly. 
+
+$$
+Y=2sin(4x-2)+3
+$$
+
+The strategy for solving these types of problems is to identify which component is which. We identify the amplitude as 2. The vertical shift tells us how many units the above or below the origin does our graph start. In our case, the ver   The period is 2pi/B, in this case our B needs to be factored out of the inside of our sine function such that there is no coefficient attached to the x. We factor out a 4, all within the sin function. 
+
+$$
+Y=2sin(4x-2)+3\\
+Y=2sin(4(x-\frac{1}{2}))+3
+$$
+
+We are now able to identify B as 4. Lets find the period now that we have B. If the period is 2pi/B,then in our case the period is 2pi/4 which is pi/2. The next component we want to find are the intervals on our x axis which is defined as period over 4, which in our case is pi/2 \ 4. Aftr we simplify, the x asix intervals are in intervals of pi/8. Finally we identify our phase shift which in our case is -1/2. The phase shift means that our graph will start at positive 1/2 to the right and NOT the origin. Remember (negative shift goes to the right, positive shift goes to the left) 
+
+Lets compute our intervals first up till we reach one period, which we found to be pi/2
+
+$$
+x_0=0\\
+x_1=\pi/8\\
+x_2=\pi/8 + \pi/8=\pi /4\\
+x_3=\pi/4+\pi/8=3\pi/8\\
+x_4=3\pi/8 + \pi/8 = \pi/2\\
+$$
+
+Now we will use software to compute the values since we will be evaluating the sine function at angles not in the main unit circle. 
+
+```{r message=FALSE, warning=FALSE}
+
+
+## define the integrated function
+our_sine <-function(x)
+  {
+  sin(4*x-2)+3
+  }
+
+print(paste0("when x=0 then y= ", our_sine(0)))
+print(paste0("when x=pi/8 then y= ", our_sine(pi/8)))
+print(paste0("when x=3pi/8 then y= ", our_sine((3*pi)/8)))
+print(paste0("when x=pi/2 then y= ", our_sine(pi/2)))
+
+```
+
+When we proceed to plotting, we get the following: 
+
+```{r}
+t=seq(0,10,0.1)
+
+library(ggplot2)
+
+y=sin(4*t-2)+3
+
+qplot(t,y,geom="path", xlab="", ylab="Sine wave")
+```
+
+
+For homework, please do the problems from the "solving trig equations" and "graphing trig functions." We will save trigonometric proofs for the algebra II module. 
+
+https://github.com/vindication09/Data-Science-Mathematics/blob/master/trig_intro.pdf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
