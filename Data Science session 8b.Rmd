@@ -1,0 +1,178 @@
+---
+title: "Data Science Session 8b"
+author: "Media Data Science"
+date: "July 29, 2019"
+output: html_document
+---
+
+#Introduction to Simple Regression 
+
+Today we are going to introduce a corner stone analytical technique while expanding some of our knowlegde of the capabilities included with r. For reference, we will be following the tutorial here:
+http://sciencefair.math.iit.edu/analysis/linereg/hand/
+
+
+R Comes pre loaded with a ton of data sets collected from various sources. One of the more well known data sets is the cars data, It is a nice clean data set to practice regression and visualization. We attach the data as follows: 
+
+```{r warning=FALSE, message=FALSE}
+require(datasets)
+
+attach(cars)
+
+summary(cars)
+```
+
+We have two variables in this dataset. The speed and dist variable. The summary function provides us some top level statistics. The stats can be quite useful when determining the distribution of data. The best way to check the relationship between two numeric variables is to plot them. R provides us with some base function to make this visualization. 
+
+The plot function is of the form
+plot(data for x axis, data for y axis, xlab='x axis name', ylab='y axis name', main='graph name')
+
+```{r warning=FALSE, message=FALSE}
+plot(cars$speed, cars$dist, xlab='Speed (mph)', ylab='Stopping Distance (ft)', 
+     main='Stopping Distance vs. Speed')
+```
+
+The problem at hand is to see if we can predict stopping distance as a function of speed. We will need to compute the various metrics by hand or in our case, by using software and not fuctions. 
+
+
+
+Lets compute all of these metrics one by one and save them to variables. Lets call stopping distance y and speed x. 
+
+http://faculty.cas.usf.edu/mbrannick/regression/Reg2IV.html
+
+The simple regression line takes the following form: 
+
+$$
+y=a+b_1x_1
+$$
+
+We wantto compute the slope and the intercept using our data to best predict y but we first need to find the metrics stated earlier in this text.
+
+## Compute the means of x and y 
+```{r warning=FALSE, message=FALSE}
+mean_x<-mean(cars$speed)
+
+mean_y<-mean(cars$dist)
+
+```
+
+
+## differences between the data point and the mean for each column 
+
+Since we need to iterate value by value, we will compute the difference between each data point and the mean and put them into new columns.
+```{r warning=FALSE, message=FALSE}
+
+n=nrow(cars)
+
+for (x in n) 
+ {
+  cars$x_to_mean_diff=(cars$speed-mean_x)
+ }
+
+for (y in n) 
+ {
+  cars$y_to_mean_diff=(cars$dist-mean_y)
+}
+
+head(cars)
+
+```
+
+## Product of mean to data point differences for x and y 
+
+We need to make a new column that is the product of x_to_mean_diff and y_to_mean_diff and call it xy
+```{r}
+for (y in n) 
+ {
+  cars$xy=(cars$x_to_mean_diff*cars$y_to_mean_diff)
+}
+
+head(cars)
+```
+
+
+## Calculate the slope b 
+
+We should have enought to compute the slope of our regression line. The formula is as follows: 
+
+$$
+b=\frac{\sum(x-mean(x))(y-mean(y))}{\sum(x-mean(x))^{2}}
+$$
+
+Lets deconstruct this formula part by part. The numerator says to take the sum of all the xy values in our xy column. The denominator says to the sum of squares of the x data point minus the mean. 
+
+```{r warning=FALSE, message=FALSE}
+b_num=sum(cars$xy)
+
+b_den=sum((cars$x_to_mean_diff)**2)
+
+b=b_num/b_den
+
+b
+```
+
+## calculate intercept 
+
+The final step is to calculate the intercept, which we can do using the initial regression equation with the values of distance and speed set as their respective means, along with our newly calculated b
+```{r warning=FALSE, message=FALSE}
+
+print(paste0("mean of distance is ", mean_y))
+print(paste0("mean of speed is ", mean_x))
+
+```
+
+Now it is a question of doing simple algebra.
+
+$$
+y=bx+a\\
+42.98=(3.932409)(15.4)+a\\
+42.98=60.5591+a\\
+-17.5791=a
+$$
+
+## State the regression line 
+
+$$
+y=3.932409(speed)-17.5791
+$$
+
+
+
+Lets store the regression line in a formula and use it to make a prediciton. Lets predict the stopping distance when the speed is 64. 
+```{r warning=FALSE, message=FALSE}
+model <-function(s)
+  {
+  3.932409*s-17.5791
+  }
+
+model(64)
+```
+
+Expert domain knowledge will tell us if this prediction makes sense or not. Lets check if we have the right regression line using r's built in function. 
+
+
+```{r warning=FALSE, message=FALSE}
+mod<-lm(dist~speed, cars)
+
+summary(mod)
+```
+
+As you can see, our intrcept and speed is given to us however, we are presented with more metrics than we found. All of these are useful. For the next session we will go over how to check if the model is a good fit and some assumptions about linear regression. 
+
+# On your own 
+
+Predict Ozone using Solar.R as a predictor variable. Compute the regression line by scratch as we did with the car example, then verify that the regression line is correct using r's lm function. 
+
+```{r warning=FALSE, message=FALSE}
+
+attach(airquality)
+
+air<-subset(airquality, select=c("Ozone", "Solar.R"))
+
+summary(air)
+
+```
+
+
+
+
+
