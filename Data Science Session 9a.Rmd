@@ -1,0 +1,165 @@
+---
+title: "Data Science Session 9a"
+author: "Media Data Science"
+date: "August 15, 2019"
+output: html_document
+---
+
+# Introduction To Probability Theory 
+
+## Materials
+
+We will be using a first course in probability by Sheldon Ross. This book is the standard for probability theory. The PDF can be found here. 
+
+https://readyforai.com/download/a-first-course-in-probability-9th-edition-pdf/
+
+## Chapter 1: Combinatorics 
+
+Combinatorics is a branch of mathematics that gives us the theoretical framework to count. We can all count in fact, we learn to count from a very young age, however there are entities that are far too large to count. If we had three blocks of three different colors (Blue, Red, Green), how could we count the number of ways we could arrange the blocks by color? One would simply try to list them out such as (Blue Red Green), (Bue, Green Red), (Red, Green , Blue) (Red Blue Green) (Green Red Blue) (Green Blue Red)...we listed out 6! 
+
+What if we wanted to find all possible telephone numbers or all possible lottery ticket number combinations?? We are unable to list those out, however, we have techniques and methods to count these things. Counting and probability go hand in hand but we will get to probability after we learn to count. 
+
+### The Basic Principal of Counting 
+
+Suppose that two experiments are to be performed. Then if experiment 1 can result in any one of m possible outcomes and if, for each outcome of experiment 1, there are n possible outcomes of experiment 2, then together there are mn possible outcomes of the two experiments. 
+
+To summarize the theorem of the basic principal of counting, if we have some experiemnt with m outcomes and another experiment with n outcomes, then m multiplied by n yield the total number of outcomes from both experiments. 
+
+Lets jump right into an example,
+A small community consists of 10 women, each of whom has 3 children. If one woman and one of her children are to be chosen as mother and child of the year,
+how many different choices are possible? 
+
+Our throught process should be how can we take this scenerio and divide it up into an experiment A and Experiment B. In our case, our choice of woman is one experiment and the choice of child is the other experiment,hence, the number of different choices for mother of the year is 10 X 3 =30
+
+We can actually generalize this theorem to consider cases where there could be more than 2 experiments. This is known as the generalized principal of counting 
+
+### The Generalized Basic Principle of Counting 
+
+If r experiments that are to be performed are such that the first one may result in any of ni possible outcomes; and if, for each of these ni possible outcomes, there are nz possible outcomes of the second experiment; and if, for each of the possible outcomes of the first two experiments, there are n3 possible outcomes of the third experiment; and if ... , then there is a total of ni · nz · · · n, possible
+outcomes of the r experiments. 
+
+Lets do an example of the generalized principle 
+
+A college planning committee consists of 3 freshmen, 4 sophomores, 5 juniors, and 2 seniors. A subcommittee of 4, consisting of 1 person from each class, is to be chosen. How many different subcommittees are possible?
+
+Our thought process should be similar to the previous problem. How can we divide the situation into experiments. The choice of one member from each class is the experiment hence if we multiply 3 X 4 X 5 X 2 =120. Hence, there are 120 ways to choose a subcommittee of 4 people from the planning committee. 
+
+At this point, you are probability wondering if order matters or doesnt matter. This is a very important concept that will be dealt with later on. 
+
+Lets practice some additional examples so that we may feel comfortable with the generalized principal of counting. 
+
+ex) How many different 7-place license plates are possible if the first 3 places are to be occupied by letters and the final 4 by numbers? 
+
+It is easy to conceptualize this problem if you imagine slots where digits and numbers will go. We have a 7-place license plate , so we can imagine 7 slots as follows:
+_ _ _- _ _ _ _ 
+The first 3 slots go to letters and the final 4 go to numbers. We can think of each slot as its own experiment. We needto identify the number of outcomes per experiment (slot)
+Also note, we are not given any infromation regarding lower case or upper case so for sake of simplicity, lets assume lower case only. We can also assume letters and numbers can be repeated. 
+
+For each of the first three slots, we can have one of 26 possible letters (a-z) and for the last four slots we can have one of 10 possible digits (0-9), hence we can make 
+26 X 26 X 26 X 10 X 10 X 10 X 10 = 175,760,000 difference license plates 
+
+Lets revist the example we did first with the three blocks of diffrent colors. When we looked at this problem, we listed all the orderings but now lets apply our counting principal. If we imagine three slots for each block _ _ _ ,then each slot its own experiment, however we know that blocks can't repeat becuase they are physical objects. For the first slot, we have our choice of three blocks. For the second slot, we only have a choice of two blocks, and for the last slot, we can only choose from one slot, hence 3 X 2 X 1=6. In this case order did matter. This leads us to the concept of the permutation.
+
+## Permutations 
+
+So far, we have only looked at situations where there are no restrictions such as ordering or repition. Lets now introduce the theoretical framework to be able to answer the same kinds of questions with some sort of ordering condition applied. 
+
+Suppose now that we have n objects. The number of ways to get n permutations is 
+
+* n(n-1)(n-2)(n-3)...=n! 
+
+This is actually what a factorial is. In this case, n should be positive and if n is 0,then 0!=1. This makes more sense then people think. It's the same as saying how many ways can you order 0 things on a very high level. There are more rigid number theory proofs to show why this is true but that is way out of scope. 
+
+Lets look at some examples
+
+ex) How many different batting orders are possible for a baseball team consisting of 9 players?
+We imagine we have 9 slots _ _ _ _ _ _ _ _ _ where each slot belongs to a baseball player. Once a player is selected in a slot, we will have 1 less players to pick from in the next slot. 
+
+in the first slot, we have 9 players to choose from, in the second slot we have 8 players to choose from, in the third slot we have 7 players to choose from...keep going down the list until you have no more players to choose from. We can then see that the number of ways to order a baseball team of 8 players is 
+9 x 8 x 7 x 6 x 5 x 4 x 3 X 2 X 1=9!= 362,880
+
+ex) A class in probability theory consists of 6 men and 4 women. An examination is given, and the students are ranked according to their performance. Assume that no two students obtain the same score. 
+
+a) How many different rankings are possible?
+In this case, we do not need to differentiate between women or men since we are looking at the entire class as a whole. There are 6+4=10 students total, so there are 10! = 3,628,800 possible rankings of students. 
+
+b) If the men are ranked just among themselves and the women just among themselves, how many different rankings are possible?
+In this case, we simply consider the men and women in their own groups. There are 6! rankings for men and 4! possible rankings for women, hence if we consider rank men and women seperate,then we have a total of (6!) X (4!)= 17,280 possible rankings. 
+
+ex) Ms. Jones has 10 books that she is going to put on her bookshelf. Of these, 4 are mathematics books, 3 are chemistry books, 2 are history books, and 1 is a language book. Ms. Jones wants to arrange her books so that all the books dealing with the same subject are together on the shelf. How many different arrangements are possible? 
+
+This problem is going to be a little tricky because there are two layers of permutations we need to consider. lets break it down bit by bit. 
+
+Lets start with the ordering of the subjetcs. There are 4 subjects (math, chem, history, language)...each slot belongs to a subject but remember that within each subject, there are multiple books. We will get to that later,but we have _ _ _ _, so in the first slot, we have 4 subjects to choose from, the third only has 3....and so forth, hence we only have 4! ways to order subjects. Now lets factor in the books within each subject. 
+
+In math, we have 4 books so 4 math books can be arranged 4! ways. We have 3 chem books that can be arranged 3! ways. We have 2 history books that can be arranged 2! and finally 1 language book can be arranged 1 way. 
+
+If we put this all together, then we can arrange all the books kept together by subject , 4! X 4! X 3! X 2! X 1!=6,912
+
+(Use whiteboard to show groupings)
+
+Now lets examine a special case of permutations 
+
+## Indistinguishable Permutations
+
+What happens in cases where objects cannot be distinguished from one another? We need a re-working of our factorial, otherwise we will be overcounting. 
+
+ex) How many different letter arrangements can be formed from the letters PEPPER? 
+
+* P1-P2-E1-P3-E2-R 
+* P1-P2-E2-P3-E1-R 
+* P1-P3-E1-P2-E2-R 
+* P1-P3-E2-P2-E1-R
+* P2-P1-E1-P3-E2-R 
+* P2-P1-E2-P3-E1-R
+* P2-P3-E1-P1-E2-R 
+* P2-P3-E2-P1-E1-R
+* P3-P1-E1-P2-E2-R 
+* P3-P1-E2-P2-E1-R
+* P3-P2-E1-P1-E2-R 
+* P3-P2-E2-P1-E1-R 
+
+We can see that we are over counting,even if we distinguish the repeated letters from one another because in the end, they are still the same letter. If we permutate the P's and the E's alone, we get 3! ways to arrange P's and 2! ways to arrange E's. We have 6 letters that can be arranged 6! ways and we divide this by the overcounting factors of repeated objects, in our case P's and E's. Hence, 
+
+$$
+\frac{6!}{3!2!}=60
+$$
+
+
+
+We can generalize the indistiguishable permutations to the following formula:
+
+$$
+\frac{n!}{n_1 ! n_2 ! ...n_r !}
+$$
+we can find different permutations of n objects, of which ni are alike, nz are alike, ... , n, are
+alike.
+
+ex) A chess tournament has 10 competitors, of which 4 are Russian, 3 are from the United States, 2 are from Great Britain, and 1 is from Brazil. If the tournament result lists just the nationalities of the players in the order in which they placed, how many outcomes are possible? 
+
+We are given information about nationalities but not players themselves, therefore, players are indistinguishable objects. 10 players can be distinguished 10! ways. Our denominator is going to consist of the factors which are similar,hence 4 russian players 4! ways, 3 us players 3! ways, 2 great britain players 2! ways and 1 brazil player 1 way, hence the number of outcomes of players is 
+
+$$
+\frac{10!}{4!3!2!1!}=12,600 
+$$
+
+## Homework and Reading for next session 
+
+* Please do the following problems on page 15: q1 - q11
+
+*Do the following problems in the Self-Test Problems and Exercises section on page 19: q1-q6
+
+* Please read chapter 1, including sections not covered here. There is a benifit in reading ahead of a lecture when it comes to understanding the concepts. 
+
+
+
+
+
+
+
+
+
+
+
+
+
