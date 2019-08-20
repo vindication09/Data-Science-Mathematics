@@ -5,13 +5,15 @@ date: "August 15, 2019"
 output: html_document
 ---
 
-# Introduction To Probability Theory 
+# Introduction To Probability Theory Part 1
 
 ## Materials
 
 We will be using a first course in probability by Sheldon Ross. This book is the standard for probability theory. The PDF can be found here. 
 
 https://readyforai.com/download/a-first-course-in-probability-9th-edition-pdf/
+
+Forpart 1 of probability theory, we will only be looking at chapters 1-4. Everything after chapter 5 requires calculus. 
 
 ## Chapter 1: Combinatorics 
 
@@ -142,6 +144,71 @@ We are given information about nationalities but not players themselves, therefo
 $$
 \frac{10!}{4!3!2!1!}=12,600 
 $$
+
+
+## Combinations
+
+We will now introduce the framework to be able to select different groups from a set of possible choices. We want to count the number of ways to select groups of r objects that could be formed from a total of n objects. It shoudl follow that r needs to be less than or equal to n. Lets introduce the proper notation. 
+$$
+\begin{pmatrix} n \\ r \end{pmatrix}=nCr=\frac{n!}{(n-r)!r!}\\
+r\le n
+$$
+Both of these notations mean the same thing. You read it as n choose r. How many ways can we choose r groups from n objects? 
+
+ex) A committee of 3 is to be formed from a group of 20 people. How many different
+committees are possible?
+
+We have tocount how many ways to form a committee of 3 from 20 people, regardless of order. 
+
+$$
+\begin{pmatrix} 20 \\ 3 \end{pmatrix}=20C3=\frac{20!}{(20-3)!3!}=
+\frac{20!}{17!3!}=\frac{20\bullet19\bullet18\bullet17!}{17!3!}=\frac{20\bullet19\bullet18}{3\bullet2}
+=1,140
+$$
+
+ex) From a group of 5 women and 7 men, how many different committees consisting of 2 women and 3 men can be formed? What if 2 of the men are feuding and refuse to serve on the committee together?
+
+We need to use combinations on top of the counting principal. Our first experiment is choosing 2 of the 5 women and our second experiment is choosing 3 out of the 7 men. We have 5C2 ways to select women and 7C3 ways to select men,therefore:
+
+$$
+\begin{pmatrix} 5 \\ 2 \end{pmatrix}\begin{pmatrix} 7 \\ 3 \end{pmatrix}
+$$
+To make our work easier, we can do each part one by one and then multiply the results at the end. 
+
+$$
+\begin{pmatrix} 5 \\ 2 \end{pmatrix}=5C2=\frac{5!}{(5-2)!2!}=\frac{5!}{3!2!}=\frac{5\bullet4\bullet3!}{3!2\bullet1}=\frac{5\bullet4}{2}=(5\bullet2)=10
+$$
+$$
+\begin{pmatrix} 7 \\ 3 \end{pmatrix}=7C3=\frac{7!}{(7-3)!3!}=\frac{7!}{4!3!}=\frac{7\bullet6\bullet5\bullet4!}{4!3\bullet2\bullet1}=\frac{7\bullet6\bullet5}{3\bullet2\bullet1}=(7\bullet5)=35
+$$
+Finally we put our results together by using the basic counting principal. 
+
+$$
+\begin{pmatrix} 5 \\ 2 \end{pmatrix}\begin{pmatrix} 7 \\ 3 \end{pmatrix}=(10)(35)=350
+$$
+
+Now lets answer the next part of the question. How can we make the same arrangement if 2 of the men are feuding and refuse to serve on the committee together?
+
+The number of ways to select the women still remain unchanged. We found that 5C2=10. As for the men, we found that there are 7C3=35 ways to select men including the two men who are fueding so what if we count the number of ways to select groups where the men are fueding and then subtract this number from all possible choices of men? 
+
+There are 7 men total. We can break this up as counting the number of ways we can select men where two fueding men are included. select 2 of the fueding men out of two fueding men and then select 1 of the remaining 5 men, hence:
+
+$$
+\begin{pmatrix} 2 \\ 2 \end{pmatrix}\begin{pmatrix} 5 \\ 1 \end{pmatrix}
+=\frac{2!}{(2-2)!2!}\frac{5!}{(5-1)!1!}
+=\frac{1}{0!}\frac{5\bullet4!}{4!}=\frac{1}{1}(5)=5
+$$
+There are only 5 ways to select groups of men inclusive of the fueding men, so we subtract this from all possible combinations to get
+
+$$
+(\begin{pmatrix} 7 \\ 3 \end{pmatrix}-\begin{pmatrix} 2 \\ 2 \end{pmatrix}\begin{pmatrix} 5 \\ 1 \end{pmatrix})(\begin{pmatrix} 5 \\ 2 \end{pmatrix})\\
+(35-5)(10)\\
+(30)(10)=300
+$$
+
+Next week will continue our discussion on combinations starting with the binomial theorem. 
+
+
 
 ## Homework and Reading for next session 
 
