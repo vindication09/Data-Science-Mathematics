@@ -206,17 +206,95 @@ $$
 (30)(10)=300
 $$
 
-Next week will continue our discussion on combinations starting with the binomial theorem. 
+## The Binomial Theorem
 
+$$
+(x+y)^{n}= \sum _{ k=0 }^{ n }{ \begin{pmatrix} n \\ k \end{pmatrix} } x^{k}y^{n-k}
+$$
+
+In elementary algebra, the binomial theorem (or binomial expansion) describes the algebraic expansion of powers of a binomial. A binomial is simply an expression that is made up of the sum of two monomials. A monomial is a single term polynomial. 
+
+This formula is not something that came out of thin air. Lets look at the reasoning behind the formula. 
+
+$$
+(a+b)^{n}=\\
+(a+b)^{0}=1\\
+(a+b)^{1}=a+b\\
+(a+b)^{2}=(a+b)(a+b)=a^{2}+2ab+b^{2}\\
+(a+b)^{3}= a^{2}+2ab+b^{2}(a+b)=a^{3}+3a^{2}b+3ab^{2}+b^{3}\\
+(a+b)^{4}=a^{3}+3a^{2}b+3ab^{2}+b^{3}(a+b)=a^{4}+4a^{3}b+6a^{2}b^{2}+4ab^{3}+b^{4}
+$$
+Each iteration of (a+b) is going to get longer and longer,however a patter starts to emerge. 
+
+Lets look at just the exponents of any "a", term by term. They are 4, 3, 2, 1. If we look at the exponents of just b, they are 1, 2, 3, 4. What are the coefficients of each term? They are 1,4,6,4,1
+
+What does this all mean? In this case lets enumurate the exponents ofeach ab pair with b starting at 0 and a starting at 4. 
+
+$$
+\begin{matrix} b_k=0 & b_k=1 & b_k=2 & b_k=3 & b_k=4 \\ { a }^{ 4 } & { a }^{ 3 } & { a }^{ 2 } & { a }^{ 1 } & { a }^{ 0 } \\ { b }^{ 0 } & { b }^{ 1 } & { b }^{ 2 } & { b }^{ 3 } & { b }^{ 4 } \\ { a }^{ 4 } & { a }^{ 3 }{ b } & { a }^{ 2 }{ b }^{ 2 } & { a{ b }^{ 3 } } & { b }^{ 4 } \end{matrix}
+$$
+We can see that if we let the exponent of b=0 and a=4 and then add 1 to the b exponent and subtract 1 from the a exponent, we can list all the terms that resulted in the expansion of (a+b) to the 4th power. 
+
+What about the coefficients? 
+```{r message=FALSE, warning=FALSE}
+pascalTriangle <- function(h) {
+  for(i in 0:(h-1)) {
+    s <- ""
+    for(k in 0:(h-i)) s <- paste(s, "  ", sep="")
+    for(j in 0:i) {
+      s <- paste(s, sprintf("%3d ", choose(i, j)), sep="")
+    }
+    print(s)
+  }
+}
+pascalTriangle(5)
+```
+
+The coefficients are actually each row of the pascal triangle. Each row pertains to each expansion starting at n=0. 
+
+All of these patters were put together into the binomial theorem. More formal proofs exist using methods such as proof by induction but they are out of the scope of this session. 
+
+Lets jump into problem solving using this theorem. 
+
+Expand the following: 
+
+$$
+(x+y)^{3}=\sum _{ k=0 }^{ 3 }{ \begin{pmatrix} 3 \\ k \end{pmatrix} } x^{k}y^{3-k}\\
+=\begin{pmatrix} 3 \\ 0 \end{pmatrix}x^{0}y^{3-0}+\begin{pmatrix} 3 \\ 1 \end{pmatrix}x^{1}y^{3-1}
++\begin{pmatrix} 3 \\ 2 \end{pmatrix}x^{2}y^{3-2}
++\begin{pmatrix} 3 \\ 3 \end{pmatrix}x^{3}y^{3-3}\\
+=y^{3}+3xy^{2}+3x^{3}y+x^{3}
+$$
+
+## Multinomial Coefficients 
+
+We will now consider the case of n objects divided into r groups. We should know that we consider n objects to be distinct. We can use multinomial coefficients to answer the question how many ways can we divide n distinct objects into r groups? 
+
+$$
+n_1 + n_2 +...+n_r=n,\\
+then\\
+\begin{pmatrix} n \\ n_1, n_2,n_3, ..., n_r \end{pmatrix}=\frac{n!}{n_1 ! n_2 ! n_3 !...n_r}
+$$
+Hence, we can count how many ways we can divide n distinct objects into r groups where nr is the size of each sub group. 
+
+Lets apply this formula to solve an example. 
+
+ex) A police department in a small city consists of 10 officers. If the department policy is to have 5 of the officers patrolling the streets, 2 of the officers working full time at the station, and 3 of the officers on reserve at the station, how many different divisions of the 10 officers into the 3 groups are possible?
+
+We have 10 distinct officers. We want to divide 10 distinct officers into a group of 5 officers on the streets, 2 officers at the station and, 3 officers on reserve. 
+
+$$
+\frac{10!}{5!2!3!}=\frac{10\bullet 9\bullet8\bullet7\bullet6\bullet5!}{5!2!3!}=\frac{10\bullet 9\bullet8\bullet7\bullet6}{2\bullet1\bullet3\bullet2\bullet1}=2,520
+$$
+
+We will skip over counting the number of integer solutions to an equation since it is a very niche application of the multinomial theorem,however I encourage the student to read about it in the text. 
 
 
 ## Homework and Reading for next session 
 
-* Please do the following problems on page 15: q1 - q11
+* Please do the following problems on page 15: q1 - q33 odd problems only
 
-*Do the following problems in the Self-Test Problems and Exercises section on page 19: q1-q6
-
-* Please read chapter 1, including sections not covered here. There is a benifit in reading ahead of a lecture when it comes to understanding the concepts. 
+* Please read chapter 1
 
 
 
