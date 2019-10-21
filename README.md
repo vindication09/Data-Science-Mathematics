@@ -5,7 +5,7 @@ This github repo will contain all the materials for the Analytics Training Sessi
 
 ## Getting Started 
 Please set up your personal github account and follow the instructions here: https://guides.github.com/activities/hello-world/
-You will be uploading your Homework Results to your personal github and sharing the link to your guthub repos. 
+You will be uploading your Homework Results to your personal github and sharing the link to your guthub repo with the instructor. 
 
 Please install Anaconda on your personal machines. Anaconda is a distributed system that includes an IDE to write r and python coding. Instructions here: https://www.anaconda.com/distribution/
 
