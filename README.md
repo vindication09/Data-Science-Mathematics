@@ -21,7 +21,7 @@ If you are unable to complete math questions on the self diagnostic math test, y
 
 ## Materials
 
-*For Algebra, we will be using Pauls Online Math notes. These open source notes are a popular choice among undergraduates as complimentary material. http://tutorial.math.lamar.edu/
+* For Algebra, we will be using Pauls Online Math notes. These open source notes are a popular choice among undergraduates as complimentary material. http://tutorial.math.lamar.edu/
 
 * For Probability, we will be using A First Course in Probability by Sheldon Ross. I will include a download link. If you are unable to download the book from this link, I will share the PDF via google drive. https://readyforai.com/download/a-first-course-in-probability-9th-edition-pdf/
 
