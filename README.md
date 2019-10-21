@@ -1,4 +1,4 @@
-# Data-Science-Mathematics (Module 1)
+# Foundations for Data Science-Mathematics (Module 1)
 
 These are the course materials for the analytics module 1. Module 1 will cover  basic algebra, Probability I, and intro to r. Over the course of the next few weeks, I will create a github repo for module 2. Module 2 will cover Intro to Statistics, Intro to Python, and Matrix Algebra. 
 
