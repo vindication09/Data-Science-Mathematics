@@ -9,4 +9,24 @@ You will be uploading your Homework Results to your personal github and sharing 
 
 Please install Anaconda on your personal machines. Anaconda is a distributed system that includes an IDE to write r and python coding. Instructions here: https://www.anaconda.com/distribution/
 
-Complete diagnostics self tests. The self test will help me determine what should be your recommended level of math. 
+Complete diagnostics self tests without looking up answers or methods. This is simply to see where your current knowledge is. 
+
+SQL Self Diagnostic: https://github.com/vindication09/Data-Science-Mathematics/blob/master/Prerequisites/sql-self-test-2015-business-intelligence.pdf
+
+Math Self Diagnostic: https://github.com/vindication09/Data-Science-Mathematics/blob/master/Prerequisites/Mathematics_Test_samples.pdf
+
+Complete the DIY SQL tutorial if you are unable to answer questions on the self diagnostic SQL test: https://www.w3schools.com/sql/
+
+If you are unable to complete math questions on the self diagnostic math test, you will stat with the Algebra lesson I have prepared. 
+
+## Lessons 
+Lessons will be published online via rpubs. You can access them anytime using your web browser. Links to HW problems are posted at the end of each lesson. 
+
+Algebra Review, Session 1:
+Algebra Review, Session 2:
+Algebra Review, Session 3:
+Algebra Review, Session 4:
+Algebra Review, Session 5:
+Algebra Review, Session 6:
+Algebra Review, Session 7:
+Algebra Review, Session 8: 
