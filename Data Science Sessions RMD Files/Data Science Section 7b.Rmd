@@ -1,0 +1,136 @@
+---
+title: "Data Science Session 7b"
+author: "Media Data Science"
+date: "June 28, 2019"
+output: html_document
+---
+
+# Intro to the r language 2 
+
+We will continue our discussion of coding priniciples by looking at how towrite functions. We begin our discussion with a look at a function in   it's mathematical form and see how we can translate it to code and use it to compute any values. 
+
+$$
+T_k=\frac{5(T+459.67)}{9}
+$$
+
+We can of course,plug any Fahrenheit T to get its conversion to kelvin but how do we make this scalable? What if we needed to convert 100 different temperature values? Sure we can do in in excel but behind the scenes, this is how we would do such an operation. 
+
+Lets start by evaluating the equation at something like 12 degrees F. 
+
+```{r message=FALSE, warning=FALSE}
+(5*(12+459.67))/9
+```
+
+What if we have 10 different temperatures? We will not sit here and compute the formula 10 times. We can instead save the formula into a function and we can feed in temperatures into this function to output the conversions. Lets call our function F_to_K. We define our function using the function command and in the brackets, we denote the input variable. Think of y=f(x)
+
+```{r message=FALSE, warning=FALSE}
+T_to_K <-function(t)
+  {
+  (5*(t+459.67))/9
+  }
+```
+
+Lets use our function by storing a value to x and then printing out the output.
+```{r message=FALSE, warning=FALSE}
+x=12 
+
+T_to_K(x)
+```
+
+Now if we wanted to compute 12 conversions for 12 differnt temperatures, it would still be tedious to define 12 different variables and compute each conversion for each value. We can instead use a program technique called the for loop. The for loop is the most basic of the loop family. The for loop allows you to automate parts of your code over as many iterations as needed. 
+
+https://www.r-bloggers.com/how-to-write-the-first-for-loop-in-r/
+
+Lets create some sample data consisting of 20 different temperature values and convert it intoa data frame. We bind 20 different values using the vector c() then we use data.frame to convert the vector into a data frame (similar to a spreadsheet). Th head function simply displays the top few rows of any data frame, 
+```{r message=FALSE, warning=FALSE}
+#define temperatures
+temp <- c(12, 46,123,56,23.6, 56,78, 34,2, 8,-5,12,77,34, 99, 11.1,56,85,99,3)
+
+temp_data<-data.frame(temp)
+
+head(temp_data, 20)
+
+```
+
+The goal here is for our function to iterate over every row in our sample data and create a new column with the converted kelvin temperature. Thankfully r already comes with a for loop wrapped up in the sapply function. Essentially the for loop built into the sapply function will go row by row and convert each temperature from F to Kelvin using the formula function we made.  
+
+```{r warning=FALSE, message=FALSE}
+temp_data$kelvin<- sapply(temp_data$temp,  T_to_K)
+
+head(temp_data, 20)
+```
+
+
+While the s apply function works in the case of creating a new column based on the values in another column, it is still crucial to learn how to write for loops from scratch. 
+
+Lets look at the structure of afor loop:
+```{r message=FALSE, error=TRUE, warning=FALSE}
+for (variable in sequence) 
+  { 
+    expression
+    expression
+    expression
+  }
+```
+
+In the above code, there is no definitions of variables so we expect an error to be raised but we only want to look at the basic structure of a for loop. We open a for loop with the for comman followed by (). The inside of the brackets lets you pick the variable you are going to iterate on for the sequence of your choice. 
+
+Lets make a for loop from scratch. we want to print out the square root of x for a list of numbers 1 through 15 as our sequence. 
+
+```{r message=FALSE, warning=FALSE}
+
+for (x in c(1:15))
+ {
+  print(sqrt(x))
+ }
+```
+
+
+Lets recall our data that we made with temperatures. We applied sapply to use r's built i for loop to convert each temperature to kelvin. Lets write our own for loop to do s similar computation as we did above. Note that our sequence is going to be the length of our data which is 20. We can store the length of our data into some variable and store the count of rows which can be found using nrow()
+
+```{r message=FALSE, warning=FALSE}
+n=nrow(temp_data)
+
+for (x in n) 
+ {
+  temp_data$sqrt_kelvin=sqrt(temp_data$kelvin)
+ }
+
+head(temp_data, 20)
+```
+
+Now lets pretend sapply never existed and we needed to use our own hand written for loop to convert the temperatures to kelvin. What would that look like? We would need to run our values in the temp column through our T_to_K function we made earlier. We use the same n we defined above. Lets call this new column, kelvin_from_scratch
+
+```{r message=FALSE, warning=FALSE}
+for (x in n)
+ {
+ temp_data$kelvin_from_scratch=T_to_K(temp_data$temp) 
+}
+
+head(temp_data,20)
+
+```
+
+
+## On your own  
+
+write your code in the following code brackets. 
+
+Create a simple data set consisting of 1 column which could represent exam scores, different temperatures, orsome arbitrary measurments. Once the data is created, display the rows (Refer to how we made the temp data earlier)
+```{r message=FALSE, warning=FALSE}
+
+```
+
+Write a function that does some univariate operation such as a formula to convert C to F or a mathematical operation of your choice. (see how we built the kelvin conversion function)
+```{r message=FALSE, warning=FALSE}
+
+
+
+```
+
+
+Create a new column in our data and apply that formula to your data to generate a new column. use the head function to display your newly created data. (refer to how we computed kelvin_from_scratch or sqrt_kelvin)
+```{r warning=FALSE, message=FALSE}
+
+```
+

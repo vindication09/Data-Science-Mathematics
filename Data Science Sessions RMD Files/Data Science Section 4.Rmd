@@ -1,0 +1,235 @@
+---
+title: "Data Science Session 4"
+author: "Media Data Science"
+date: "May 14, 2019"
+output: html_document
+---
+
+#Chapter 4 Algebra Continued
+
+##Exponential Function
+
+A different kind of function; Today we will expand out knowledge of functions by introducing exponents and logarithms. These constructs appear frequently in probability theory so it is important to begin getting familiar with them and look at how they are used mechanically. 
+
+Lets define the exponential function;
+
+If b is any number such that b>0 and b not equal to 1, then the exponential function is defined as 
+
+$$
+f(x)=b^x
+$$
+Where b is the base and x can be any real number. 
+
+The reason why b is not zero or not 1 is shown blow:
+
+$$
+f(x)=0^x=0\\
+f(x)=1^x=1
+$$
+
+When b is zero or 1, then the function is simply a constant. 
+
+We also generally do not let b be a negative number since a negative b value will yield a complex orimaginary value. 
+
+What do exponential functions look like graphically? 
+Lets plot functions f(x) and g(x) on the same plot shown down below: 
+
+$$
+f(x)=2^x\\
+g(x)=(1/2)^x
+$$
+
+Lets generate some values for these two functions since we do not have any idea of what they could possible look like. Lets start with the f(x) function:
+
+Note: When picking numbers to generate some output, try some negative numbers and work your way up the number line. We do not want to miss anything. 
+
+$$
+f(x)=2^x\\
+f(-2)=2^{-2}=\frac{1}{2^2}=\frac{1}{4}\\
+f(-1)=2^{-1}=\frac{1}{2^1}=\frac{1}{2}\\
+f(0)=2^0=\frac{1}{2^0}=\frac{1}{1}=1\\
+f(1)=2^1=2\\
+f(2)=2^2=4
+$$
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+eq = function(x){2^x}
+curve(eq, from=-5, to=10, xlab="x", ylab="y")
+```
+
+Lets repeat the same for function g(x)
+
+$$
+g(x)=(1/2)^x\\
+g(-2)=(1/2)^{-2}=\frac{1}{(\frac{1}{2})^2}=\frac{1}{\frac{1}{4}}=4\\
+g(-1)=(1/2)^{-1}=\frac{1}{(\frac{1}{2})^1}=\frac{1}{\frac{1}{2}}=2\\
+g(0)=(1/2)^0=1\\
+g(1)=(1/2)^1=\frac{1}{2}\\
+g(2)=(1/2)^2=\frac{1}{2^2}=\frac{1}{4}
+$$
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+eq = function(x){0.5^x}
+curve(eq, from=-5, to=10, xlab="x", ylab="y")
+```
+
+Another fun fact about our function g(x) is that it can be re-written as follows:
+
+$$
+g(x)=(1/2)^x=\frac{1^x}{2^x}=\frac{1}{2^x}=2^{-x}
+$$
+
+We now know how to graph these functios. Lets examine some properties of exponential functions that will be useful when solving equations consisting of exponetial functions. 
+
+Properties of:
+
+$$
+f(x)=b^x
+$$
+
+* The graph of f(x) will always contain the point (0,1) which is the same as f(0)=1
+
+* For every possible b, we have 
+
+$$
+b^x>0\\
+b^x\neq 0
+$$
+
+* If 0< b<1 then the graph of f(x) will decrease as we move from left to right. (Recall our example)
+
+* If b >1 then the graph of f(x) will increase as we move from left to right (Also recall above example)
+
+* IF 
+
+$$
+b^x=b^y\\
+then\\
+x=y
+$$
+
+
+Now we are going to talk about most well known exponential function, in fact most people think of only this function when they talk about the exponential function. I am talking about the following: 
+
+$$
+f(x)=e^x
+$$
+
+where e = 2.718281828... The reason why e is given this value comes from a branch of mathematics called number theory. 
+
+Here is what it looks like:
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+eq = function(x){2.718281828^x}
+curve(eq, from=-5, to=10, xlab="x", ylab="y")
+```
+
+Here are the practice problems relating to this material 
+
+https://github.com/vindication09/Data-Science-Mathematics/blob/master/Alg_ExpFunctions_Assignment%20(1).pdf
+
+
+## Log Function 
+
+Lets start with the definition of the log function 
+If b is any number such that b > 0 and b ≠ 1 and x > 0 then,
+
+$$
+y=log_bx\\
+ equivalent \\
+ b^y=x
+$$
+
+We read this as log base b of x. The top is the log form while the bottom is the exponetial form, however both are equivalent. 
+
+Lets quote Paul's online math notes since they are the most direct when it comes to defining what log functions actually mean 
+
+"Now, let’s address the notation used here as that is usually the biggest hurdle that students need to
+overcome before starting to understand logarithms. First, the “log” part of the function is simply three
+letters that are used to denote the fact that we are dealing with a logarithm. They are not variables and
+they aren’t signifying multiplication. They are just there to tell us we are dealing with a logarithm.
+
+Next, the b that is subscripted on the “log” part is there to tell us what the base is as this is an important
+piece of information. Also, despite what it might look like there is no exponentiation in the logarithm
+form above. It might look like we’ve got x b in that form, but it isn’t. It just looks like that might be
+what’s happening."
+
+How do we evaluate log form problems? 
+
+$$
+log_416=?\\
+$$
+We need to convert the lof form to the exponential form.
+
+$$
+4^?=16
+$$
+
+In other words, we are wondering 4 raised to the what power will equal 16. lets call our unkown ? x 
+
+$$
+4^x=16\\
+x=2
+$$
+
+We have to determine that 4 raised to the power of 2 will yield 16. 
+
+Lets do a difficult example; 
+
+$$
+log_{\frac{3}{2}}\frac{27}{8}
+$$
+
+We have log base 3/2 of 27/8. We want to follow a similar approach to the above problem by re-writing in exponential form. 
+
+$$
+(\frac{3}{2})^x=\frac{27}{8}
+$$
+
+We need to think of a number that when 3 is raised to will yield 27. This same number has to ensure that 2 raised to this value will yield 8. In this case our answer is x=3. 3 raised to the third power is 27 and 2 raised to the third power is 8. 
+
+We will not divide the concept of the logaithm to two subsets: 
+
+* common log 
+
+$$
+logx=log_{10}x
+$$
+
+* natural log 
+
+$$
+lnx=log_ex
+$$
+
+Graphically,this is what the natural log looks like:
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+eq = function(x){log10(x)}
+curve(eq, from=-1, to=10, xlab="x", ylab="y")
+```
+
+Lets conclude the session with some simple examples. 
+
+$$
+log1000
+$$
+
+Notice how we do not have a base. In this case the base is implied. We must deduce that the base in this case is 10. 
+
+$$
+log_[10]=1000\\
+10^x=1000\\
+x=3
+$$
+
+For the next session, we will look into properties of log and start solving equations that involve logs and exponents. 
+
+Practice problems for log 
+https://github.com/vindication09/Data-Science-Mathematics/blob/master/Alg_LogFunctions_Assignment.pdf
+
+
+
+
+
+
+
+

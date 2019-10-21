@@ -1,0 +1,290 @@
+---
+title: "Probability 2"
+author: "Media Data Science"
+date: "October 17, 2019"
+output: html_document
+---
+
+
+# Introduction To Probability Theory Part 2
+
+## Materials
+A First course in Probability 
+
+## Chapter 2: Axioms of Probability  
+
+In order to discuss the concept of probability, we need to become familiar with some preliminary terms such as samples spaces and events. 
+
+### Basic Set Theory 
+
+Lets consider an experiment with an outcome that cannot be predicted with any degree of certainty. Lets also assume that we know every possible outcome from that event. We call the set of all possible outcomes our "sample space", typically denoted as S. 
+
+Lets consider some outcomes and represent them as sets of all possible outcomes. 
+
+* Assume the experiment is the sex of a newborn child where b is for boy and g is for girl
+
+$$
+S=\{b,g\}
+$$
+
+Our sample space in this case has a size of 2. 
+
+* If the outcome of an experiment is the order of finish in a race among the 7 horses having post positions 1, 2, 3, 4, 5, 6, and 7
+
+$$
+S={7!}
+$$
+
+The set for this example would consist of listing out all the different orderings of horses, however there are 7! different permutations total. If horses are numbered 1 through 7 then an element in our set could look like (2, 3, 1, 6, 5, 4, 7). Instead we show the "cardinality" of our set S which is just another way of saying the size of our sample space. We will get to this idea in more detail furthur on in this section. 
+
+* If the experiment consists of flipping two coins, then the sample space consists of the following four points (H=heads, T=tails):
+
+$$
+S=\{(T,T),(H,H),(T,H),(H,T)\}
+$$
+In this case, we would say that our sample space has a size of 4. 
+
+* If the experiment consists of measuring (in hours) the lifetime of a transistor, then the sample space consists of all nonnegative real numbers; that is,
+
+$$
+S=\{x:0 \le x < \infty\}
+$$
+
+In this case, lifetime is a continous variable unlike the previous examples which were discrete. Hence our sample space in this case is not a count of discrete elements but rather all non-negative real numbers. 
+
+To touch on a point mentioned earlier, our sample space is in the form of a mathematical stucture called a set. The number of elements in a set is called the "cardinality" or the "size" of the set. 
+
+With the framework for sample spaces in mind, lets define an event. An Event (E) is a subset of the sample space. Lets take the coin example from above. 
+
+Lets go back to the our example on determining the sex of a newborn. We know that there are possible outcomes but we can define an event as follows: The event that the sex is a girl would be defined as E=g while the event that the sex is a boy can be defined as F=b. Each event is also a set with both having a size of 1. 
+
+Lets revist the example of flipping two coins. An event could be flipping coins such that the first coin lands on head. We would define our event E as E=(H,T),(H,H)
+
+Lets also look at our transistor example. An event for this scenerio could be the event that the transistor does not live longer than 5 minutes. Therefore we define the event as
+
+$$
+{t:0<t\le5}
+$$
+
+Moving On
+
+
+Set theory gives us the techniques to perform manipulation on events such as all unique outcomes from two different events. We could even find an event defined as the common element from two different events. 
+
+We introduce the idea of union and intersection from set theory. These concepts are also the basis of JOIN variations in SQL. Assume we have events E and F, then the union of E and F is written as: 
+
+$$
+E \cup F
+$$
+
+We would read this as the event of E OR F occuring. Lets extend this idea to a more hands on scenerio. 
+
+Lets say we are flipping two coins and we define event E as the event of getting heads on the first coin then we would have E={(H,T),(H,H)}. Now lets say we have another event F defined as getting tails on the last coin, then we have F={(H,T),(T,T)}. We know want to define an event where either E or F occurs. The union of events E and F would be written as follows: 
+
+$$
+E=\{(H,T),(H,H)\}\\
+F=\{(H,T),(T,T)\}\\
+E \cup F={(H,T),(H,H),(T,T)}
+$$
+
+Mechanically we are simply listing all unique events between E and F. The size of our union would be three in this case. 
+
+Similar to the union of two events, we can find the common element between events and denote that as the "intersection". Using our same scenerio of flipping two coins, event E is defined as gettings heads on the first coin while event F is defined as getting tails on the last coin...The intersection could be the event where first coin is heads and second coin is tails as follows:
+
+$$
+E=\{(H,T),(H,H)\}\\
+F=\{(H,T),(T,T)\}\\
+E \cap F=\{(H,T)\}
+$$
+
+The size of the intersection where the first coin is heads and second coin is tails is 1. You would read the intersection as the event where E AND F both occur. 
+
+Lets say we wanted to define the event where tails is the first coin and heads is the second coin...Could we do it?
+
+$$
+E=\{(H,T),(H,H)\}\\
+F=\{(H,T),(T,T)\}\\
+E \cap F=\phi 
+$$
+
+In this case, there is no event where Tails is the first coin and Heads is the second coint. We use phi to denote that the intersection is the null set sometimes known as the empty set. A consequence of the empty set implies that both events E and F are mutually exclusive. 
+
+Generally we can define the union and intersection for more than two events using the following notation:
+
+$$
+ \bigcup _{ n=1 }^{ \infty }{ E_n } \\
+  \bigcap _{ n=1 }^{ \infty }{ E_n } 
+$$
+
+This notation states the union/intersection for all outcomes in event E1, E2,E3,....
+
+
+We introduce the idea of the "complement". The complement is defined as all outcomes in the sample space NOT in event E. Lets revist our coin example. Recall the sample space resulting from slipping two coins. 
+
+$$
+S=\{(T,T),(H,H),(T,H),(H,T)\}
+$$
+Lets say we define event E as the event where the first and second coin are both heads. If we wanted to define the compliment of this event, we want to list all outcomes NOT in E, in this case our compliment is show as follows:
+
+$$
+E^{c}=\{(T,T),(T,H),(H,T) \}
+$$
+
+As of now, we looked at unions, intersections, and compliments. Another common structure within sets is the idea of subsets. Suppose we have two sets E and F, then we define a subset by stating if all outcomes in set E are also in set F, then E is a subset of F.
+
+Lets say E is the set of numbers F=(1,2,3,4,5) and E is the set of numbers E=(1,2) then we say E is a subset of F. The notation for subset is shown below: 
+
+$$
+E \subset F
+$$
+
+## Operations on Sets
+
+Similar to rules in algebra, we can define rules on set operations. 
+
+* Commutative laws
+
+$$
+E \cap F=F \cap E\\
+or\\
+EF=FE
+$$
+
+* Associative laws
+
+$$
+(E \cup F)\cup G=E \cup (F \cup G)\\
+(EF)G=E(FG)
+$$
+
+* Distributive laws
+
+$$
+(E \cup F)G=EG \cup FG
+$$
+
+As a consequence of these laws, we introduce DeMorgans Law as follows: 
+
+$$
+(\bigcup _{ i=1 }^{ n }{ E_i })^{c}=\bigcap_{i=1}^{n}{E_{i}^{c}}\\
+(\bigcap _{ i=1 }^{ n }{ E_i })^{c}=\bigcup_{i=1}^{n}{E_{i}^{c}}
+$$
+
+We can deconstruct these laws to see how they work with just two events E and F. 
+
+$$
+(E \cup F)^{c}=E^{c} \cap F^{c}\\
+(E \cap F)^{c}=E^{c} \cup F^{c}
+$$
+
+Understanding sets and their properties are essential to solving problems in probability and statistics. 
+
+### Axioms of Probability 
+
+We can typically define probability in terms of a relative frequency. We can think of relative frequency as an experiment with S outcomes, performed repeatedly under the same conditions. For each event E within sample space S, we say that n(E) are the number of n repetitions where event E occurs. Hence we can define probability as:
+
+$$
+P(E)=\lim _{n->0  }{ \frac{n(E)}{n} } 
+$$
+This definition is the proportion of time that E occurs, hence the relative frequency of E. The one drawback with this definiton of probability is that we don't know if the relative frequency will converge to the same limit (value) for different sequences of experiments. This is known as the frequentist definition of probability. 
+
+We need to consider a more modern axiomatic approach to the definition of probability. Rather than thinking of probability as the convergence of relative frequencies, we can assume that for each event E within the sample space S, there exists a probability P(E) .
+
+Lets define our axioms of probability:
+Consider an experiment whose sample space is S. For each event E of the sample space S, we assume that a number P(E) is defined and satisfies the following three axioms: 
+
+Axiom 1
+A probability is a measure bounded by the closed intevral [0,1]
+
+$$
+0 \le P(E) \le1
+$$
+
+Axiom 2: 
+
+The probability of an element within the sample space S, is always 1. 
+
+$$
+P(S)=1
+$$
+
+Axiom 3: 
+
+For any sequence of mutually exclusive events E1, E2, ... (that is, events for which intersection of events EiEj = 0 when i not equal to j), 
+
+$$
+P(\bigcup _{ i=1 }^{ \infty}{ E_i })=\sum _{ i=1 }^{ \infty }{ P(E_i) }
+$$
+
+For any sequence of mutually exclusive events, the probability of at least one of these events occurring is just the sum of their respective probabilities. 
+
+
+Lets proceed to some examples now with our axioms of probability defined. 
+
+* ex) If our experiment consists of tossing a coin and if we assume that a head is as likely
+to appear as a tail, then we would have P(Tails)=P(Heads)=1/2
+
+* ex) If a die is rolled and we suppose that all six sides are equally likely to appear, then
+we would have P({l}) = P({2}) = P({3}) = P({4}) = P({5}) = P({6}) = 1/6· From
+Axiom 3, it would thus follow that the probability of rolling an even number would
+equal to P({2, 4, 6})=(1/6)+(1/6)+(1/6)=3/6=1/2 (Remember that rolling a 4 is mutually exclusive event from rolling a 2 or a 6, hence axiom 3 is applied)
+
+Lets introduce some propositions:
+
+* The probability of the compliment of an Event is the probability of the event subtracted from 1 as follows: 
+
+$$
+P(E^c)=1-P(E)
+$$
+The probability of rolling a 2 in a fair die is 1/6, hence the probability of not rolling a 2 is 1-(1/6)=5/6
+
+* If E is a subset of F, then: 
+
+$$
+P(E)\le P(F)
+$$
+
+* Inclusive-Exclusive probability 
+
+The next proposition gives the relationship between the probability of the union of two events, expressed in terms of the individual probabilities, and the probability of the intersection of the events. 
+
+$$
+P(E \cup F) = P(E)+P(F)-P(E \cap F)
+$$
+
+Lets proceed to applying the axioms and probabilities to solving some basic problems. 
+
+* ex) J is taking two books along on her holiday vacation. With probability .5, she will like the first book; with probability .4, she will like the second book; and with probability .3, she will like both books. What is the probability that she likes neither book? 
+
+Lets denote the following: 
+The probability of liking the first book is P(B1) = .5 
+The probability of liking the second book is P(B2)=.4
+The probability of liking both books is P(B1B2)=.3
+
+We are given information regarding the probability of each event B1 and B2 occuring as well as the probability of the intersection of the two events occuring. We want to use the proposition that models the relationship between the union and intersection of events. 
+
+$$
+P(B_1 \cup B_2) = P(B_1)+P(B_2)-P(B_1 \cap B_2)\\
+=(.5)+(.4)-(.3)\\
+=.6
+$$
+
+This DOES NOT give us the answer we need. We found the probability J will like Book1 or Book2, however we need the probability that she will not like neither. This is when we apply the compliment proposition. 
+
+$$
+=1-P(B_1 \cup B_2)\\
+\\1-.6\\
+=.4
+$$
+
+The probability of not liking either book is the compliment of the event where she will like book 1 or book 2. 
+
+
+## Homework
+
+Continue Reading chapter 2. Chapter 2 is the longest chapter, hence we will be spending some time on this chapter. 
+
+
+
+
+

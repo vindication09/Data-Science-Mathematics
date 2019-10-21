@@ -1,0 +1,96 @@
+---
+title: "Data Science Session 6b"
+author: "Media Data Science"
+date: "June 18, 2019"
+output: html_document
+---
+
+# Intro to the r language 
+
+Reading: https://github.com/vindication09/Data-Science-Mathematics/blob/master/R-intro.pdf
+
+We will be learning how to code using r. R is a great language to get started with programing since it is open source and there are so many resources out there to learn r. It is also the most user friendly. 
+
+By now, you should have r and r studio installed on your system. We will be using rstudio. R studio takes the r language and puts it into a very easy to use UI where you can access your data, console, and packages. 
+
+We are going to be doing these lessons using r markdown. rmarkdown is a very handy way to run code and write out statements. It is quite popular for the use of academic papers, reports, or even writing books. 
+
+To write out some code, we want to define a region as follows:
+
+Three tickmarks followed by {r} means "r code starts here" and to end the r code we close the section with another three tickmarks. 
+
+Now that we have opened up a block to run code, you will see something that resembles the "play" button. If you click that, it will run the code in the block. Lets write something very simple. Lets store a number in two variables and do some operations in the two variables. Our variables could be any letter or phrase that doesnt start with a number. Lets pick x and y. To assign a value to a variable, we use <-
+
+Lets assign 5 to x and 4 to y, then lets add, multiply, and divide x by y and print the output . R will automatically print the output. 
+
+```{r}
+x<-5
+
+y<-4
+
+x+y
+
+x*y
+
+x/y
+
+
+```
+
+While we have our desired output, someone seeing this might now know what belongs to which. We can use the print and paste functions to fix that. Lets open up a new block code and see if we can use print and paste0 to better display our output. We already have the values stored in memory for x and y. We can certainly override them using x<-7for example. The print function prints output white the paste0 function inside the print allows you to write some text.
+
+```{r}
+print(paste0("The product of x and y is ",x*y))
+print(paste0("The sum of x and y is ",x+y))
+print(paste0("The division of x by y is ",x/y))
+```
+
+So as of now, we have seen r used as a calculator but this is not even a drop in the ocean of what is capable. R was written as statistical analysis software but it has evolved passed that over time. The goal is to be able to apply the language to solve some of the mathematical problems we encountred as well as use it when we start our probability unit. 
+
+We ca store arrays of numbers in a data structure known as a vector. Vectors are an ordered pair of numbers of length n. Lets builda vector with some arbitrary numbers and then expand to do some operations on vectors. Lets open up a block of code. 
+
+```{r}
+
+v<-c(1, 4, 6,3)
+
+h<-c(6,0.5, 12,9)
+
+print(paste0("The length of v is ", length(v)))
+
+print(paste0("The length of h is ", length(h)))
+
+```
+
+We defined vctors v and h both of length 4. If we wanted to see the actual length for each vector we can type in and run length(v) to get 4,the number of elements in vector 4.
+
+Lets now make a new vector of many numbers and learn how to compute basic stats on these numbers. We open a new code block. Lets find the max, the min , and compute the mean. 
+
+```{r}
+k<-c(10,4,2,35,17,35,55,3,45,5)
+
+print(paste0("The max of k is ", max(k)))
+print(paste0("The min of k is ", min(k)))
+```
+
+Lets compute the mean of k . We know the mean of k is the sum of k the k elements divded by the length of the vector. In r, we can do as follows: 
+
+```{r}
+meank<-sum(k)/length(k)
+
+print(paste0("The mean of k is ", meank))
+```
+
+is it the same as r's built in mean function?
+```{r}
+mean(k)
+```
+
+Please read the following documentation and we will cover making our own functions next session 
+http://media.news.health.ufl.edu/misc/bolt/Software_R/docs/03_WorkingWithFunctions.pdf
+
+
+
+
+
+
+
