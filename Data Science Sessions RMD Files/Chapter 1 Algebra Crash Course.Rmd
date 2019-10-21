@@ -1,0 +1,329 @@
+---
+title: "Mathematics for Data Science"
+author: "Media Data Science"
+date: "April 1, 2019"
+output:
+  html_document: default
+  word_document: default
+---
+
+# A Quick Algebra Crash Course 
+
+This is the first in a multi-part series covering mathematics for Data Science. The goal is for the user to be able to have the necessary toolset required to understand and exectute statistical analysis and more advanced Data Science practices such as machine learning. 
+
+## Pre-Requisite 
+The user should be able to perform operations on fractions such as addition, subtraction, division, and multiplication. 
+
+## Operations on Expressions 
+Recall Order of Operations (PEMDAS). The purpose of this section is to review how to simplify expressions. These operations may come into play when it comes to deriving a statistic in a data set from the other variables. 
+
+We will look at operations on expression with exponents. Consider the following rules:
+Assume x is not equal to y 
+
+$$
+x^{n}\dot y^{n}=(x \dot y)^{n}\\
+$$
+
+
+
+$$
+x^{a} \dot x^{b}=x^{a+b}\\
+$$
+
+
+$$
+\frac{x^{a}}{x^{b}}=x^{a-b}\\
+$$
+
+
+$$
+\frac{x^{a}}{y^{a}}=(\frac{x}{y})^{a}\\
+$$
+
+
+$$
+(x^{a})^{b}=x^{a \dot b}\\
+$$
+
+
+
+
+$$
+\sqrt{x}=x^{\frac{1}{2}}\\
+$$
+
+
+
+
+$$
+\sqrt [ n ]{ x } =x^{\frac{1}{n}}\\
+$$
+
+
+
+$$
+x^{-n}=\frac{1}{x^n}\\
+$$
+
+
+
+$$
+x^1=x\\
+$$
+
+$$
+x^0=1
+$$
+
+Lets go through an example that uses most of these elements before you try some on your own:
+
+$$
+\frac { { x }^{ 4 }\sqrt { y }  }{ { x }^{ 2 }y } \\
+$$
+
+
+
+$$
+=x^{4-2}y^{\frac{1}{2}-1}\\
+$$
+
+
+
+
+$$
+=x^{2}y^{-\frac{1}{2}}\\
+$$
+
+
+
+$$
+=\frac{x^2}{y^{\frac{1}{2}}}
+$$
+
+
+
+
+Try the following problems on your own:
+Simplify
+
+$$
+x^3 \dot x^{2}=
+$$
+
+
+
+
+
+
+
+$$
+x^{5}  \sqrt{x}=
+$$
+
+
+
+$$
+xy^{4} \sqrt[4]{xy^4}=
+$$
+
+
+
+$$
+\frac{xy^{4}z^{2}}{x^{5}yz^{8}}=
+$$
+
+
+
+
+$$
+(xyx)^{4}(xy)=
+$$
+
+
+
+## Equations 
+
+Mathematics gives us the ability to translate a real life problem into equations and variables. We use variables to represent quantities while using equations to demonstrate the relationship between those variables. For example, lets say a product costs 25 dollars and we need a model that tells us how much money we will make per product sold. We don't know how many products we will sell so that is our unknown. Our simple model is simply 25x, in othr words 25 dollars multiplied by the number of products sold. 
+
+In terms of our trainig, we will examine how to solve equations given some knowns and unknowns and then solve systems of equations, which will have a direct tie into linear algebra in a future session. 
+
+Lets start with the most simple of cases (solve for x)
+
+$$
+2x=4\\
+x=\frac{4}{2}\\
+x=2
+$$
+
+Equations can get tricky when exponents are involved but the principal of what you do to one side, you do to the other still applies here. In this example, we needed to divide and clear the exponent in order to get x alone. 
+
+$$
+2x^{\frac{1}{2}}=16\\
+x^{\frac{1}{2}}=\frac{16}{2}\\
+x^{\frac{1}{2}}=8\\
+(x^{\frac{1}{2}})^{2}=8^{2}\\
+x=64
+$$
+
+
+Try your hand at a few equations while keeping order of operations in mind. 
+
+$$
+3x^2=18
+$$
+
+$$
+\sqrt{x}=2
+$$
+
+
+$$
+x^2+4=16
+$$
+
+
+
+
+
+Now we just finished solving some equations that contained a squre term. The answers we produced are not exactly correct. They are actually incomplete. Equations with squares are called quadratic equations, denoted by a term raised to the second power. 
+
+Lets revist a problem 
+
+$$
+3x^2=18\\
+$$
+
+
+$$
+x^2=6\\
+$$
+
+
+
+
+
+
+$$
+\sqrt{x^2}=\sqrt{6}\\
+$$
+
+
+
+$$
+x=+\sqrt{6}\\
+x=-\sqrt{6}
+$$
+
+This problem actually has two solutions for x. You can try to plug in negative radical 6 and positive radical 6 and will arrive at the correct solution. This brings us to our next subsection, powers and polynomials. 
+
+##Polynomials 
+
+Be definition, In mathematics, a polynomial is an expression consisting of variables and coefficients, that involves only the operations of addition, subtraction, multiplication, and non-negative integer exponents of variables such as the example below:
+
+$$
+x^2+2x+2
+$$
+
+Polynomials are an important mathematical construct since they appear commonly in data science processes. In some regression techniques, a linear regression equation could be transformed to a polynomial to increase variability with its variables. Polynomial regression runs a higher risk of overfitting but there are ways to deal with that. 
+Solving polynomial equations require techniques of factoring. I will highlight some of the most common factoring techniques used:
+
+$$
+a^2-b^2=(a-b)(a+b)\\
+a^3-b^3=(a-b)(a^2+ab+b^2)\\
+a^3+b^3=(a+b)(a^2-ab+b^2)\\
+ax+ay=a(x+y)
+$$
+
+How about solving polynomial equations?
+
+$$
+x^2-a^2=0\\
+(x-a)(x+a)=0\\
+x=a\\
+x=-a
+$$
+
+in addition to using order of operations and factoring,some equations require the use of quadratic formula to find solutions of x. 
+
+$$
+ax^2+bx+c=0\\
+x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}
+$$
+
+Lets do some examples together: 
+Factor
+
+$$
+x^2-4\\
+(x-2)(x+2)
+$$
+
+$$
+x^3+8\\
+(x+2)(x^2-2x+2^2)
+$$
+
+$$
+2x^2-4\\
+x^2-2\\
+(x-\sqrt(2))(x+\sqrt(2))
+$$
+
+How about solving equations with polynomials? 
+
+$$
+u^2-1=0\\
+(u-1)(u+1)=0\\
+u=1\\
+u=-1
+$$
+
+$$
+x^2-3x+2=0\\
+x_1=\frac{-(-3)+\sqrt{(-3)^2-4(1)(2)}}{2(1)}=\frac{3+\sqrt{9-8}}{2}=\frac{3+\sqrt{1}}{2}=\frac{4}{2}=2\\
+x_2=\frac{-(-3)-\sqrt{(-3)^2-4(1)(2)}}{2(1)}=\frac{3-\sqrt{9-8}}{2}=\frac{3-\sqrt{1}}{2}=\frac{2}{2}=1
+$$
+
+Do our solutions work? 
+
+$$
+(2)^2-3(2)+2=4-6+2=0\\
+(1)^2-3(1)+2=1-3+2=0
+$$
+
+
+Try some yourself:
+
+$$
+x^2-5x-14=0
+$$
+
+
+
+$$
+6x^2+15x=0
+$$
+
+
+One way to check how many solutions a polynomial has is to examine the multiplicity. That tells you the number of factors aassocited with a equation.For example, if the highest power (also known as degree) of an equation is 3, then it has a multiplicity of three meaning it was three factors which means it has three solutions. 
+
+
+## For next time...
+
+We will be looking at systems of equations and inequalities
+
+
+
+
+##Part 2 of This Session: Basic SQL 
+
+We will be using data that has already been loaded into BQ tutorial_data. The tables of interest are console_dates and console_games. We have a historic list of games released from 1990 - 2015 and a list of console attributes. 
+
+We will be developing the following reports using legacy sql. 
+1. Calculate what percent of Global Sales were made in North america 
+2. Extract a view of the console game titles ordered by platform name in ascending order and year of release in descending order
+3.For each game title, extract the first four letters of the publishers name
+4.Display all console platforms which were released either just before Black Friday or just Christmas in 2014
+5. order platform by their longevity in ascending order 
+6.Demonstrate how to deal with the game_year column is client wants to convert it to different data type
+7.How would you deal with missing data in these files?
