@@ -7,17 +7,23 @@ This github repo will contain all the materials for the Analytics Training Sessi
 Please set up your personal github account and follow the instructions here: https://guides.github.com/activities/hello-world/
 You will be uploading your Homework Results to your personal github and sharing the link to your guthub repo with the instructor. 
 
-Please install Anaconda on your personal machines. Anaconda is a distributed system that includes an IDE to write r and python coding. Instructions here: https://www.anaconda.com/distribution/
+*Please install Anaconda on your personal machines. Anaconda is a distributed system that includes an IDE to write r and python coding. Instructions here: https://www.anaconda.com/distribution/
 
-Complete diagnostics self tests without looking up answers or methods. This is simply to see where your current knowledge is. 
+*Complete diagnostics self tests without looking up answers or methods. This is simply to see where your current knowledge is. 
 
-SQL Self Diagnostic: https://github.com/vindication09/Data-Science-Mathematics/blob/master/Prerequisites/sql-self-test-2015-business-intelligence.pdf
+*SQL Self Diagnostic: https://github.com/vindication09/Data-Science-Mathematics/blob/master/Prerequisites/sql-self-test-2015-business-intelligence.pdf
 
-Math Self Diagnostic: https://github.com/vindication09/Data-Science-Mathematics/blob/master/Prerequisites/Mathematics_Test_samples.pdf
+*Math Self Diagnostic: https://github.com/vindication09/Data-Science-Mathematics/blob/master/Prerequisites/Mathematics_Test_samples.pdf
 
-Complete the DIY SQL tutorial if you are unable to answer questions on the self diagnostic SQL test: https://www.w3schools.com/sql/
+*Complete the DIY SQL tutorial if you are unable to answer questions on the self diagnostic SQL test: https://www.w3schools.com/sql/
 
 If you are unable to complete math questions on the self diagnostic math test, you will stat with the Algebra lesson I have prepared. 
+
+## Materials
+
+*For Algebra, we will be using Pauls Online Math notes. These open source notes are a popular choice among undergraduates as complimentary material. http://tutorial.math.lamar.edu/
+
+* For Probability, we will be using A First Course in Probability by Sheldon Ross. I will include a download link. If you are unable to download the book from this link, I will share the PDF via google drive. https://readyforai.com/download/a-first-course-in-probability-9th-edition-pdf/
 
 ## Lessons 
 Lessons will be published online via rpubs. You can access them anytime using your web browser. Links to HW problems are posted at the end of each lesson. 
