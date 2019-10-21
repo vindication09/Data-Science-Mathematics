@@ -22,11 +22,11 @@ If you are unable to complete math questions on the self diagnostic math test, y
 ## Lessons 
 Lessons will be published online via rpubs. You can access them anytime using your web browser. Links to HW problems are posted at the end of each lesson. 
 
-Algebra Review, Session 1:
-Algebra Review, Session 2:
-Algebra Review, Session 3:
-Algebra Review, Session 4:
-Algebra Review, Session 5:
-Algebra Review, Session 6:
-Algebra Review, Session 7:
-Algebra Review, Session 8: 
+* Algebra Review, Session 1:
+* Algebra Review, Session 2:
+* Algebra Review, Session 3:
+* Algebra Review, Session 4:
+* Algebra Review, Session 5:
+* Algebra Review, Session 6:
+* Algebra Review, Session 7:
+* Algebra Review, Session 8: 
