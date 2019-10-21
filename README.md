@@ -11,6 +11,10 @@ You will be uploading your Homework Results to your personal github and sharing 
 
 * Please install Anaconda on your personal machines. Anaconda is a distributed system that includes an IDE to write r and python coding. Instructions here: https://www.anaconda.com/distribution/
 
+* Please install a text editor. I personally like sublime text editor because it color codes the syntax according to detected language. Text editors allow you to write and format code
+sublime: https://www.sublimetext.com/
+EM-Editor: https://www.emeditor.com/
+
 * Complete diagnostics self tests without looking up answers or methods. This is simply to see where your current knowledge is. 
 
 * SQL Self Diagnostic: https://github.com/vindication09/Data-Science-Mathematics/blob/master/Prerequisites/sql-self-test-2015-business-intelligence.pdf
