@@ -27,7 +27,9 @@ If you are unable to complete math questions on the self diagnostic math test, y
 
 * For Probability, we will be using A First Course in Probability by Sheldon Ross. I will include a download link. If you are unable to download the book from this link, I will share the PDF via google drive. https://readyforai.com/download/a-first-course-in-probability-9th-edition-pdf/
 
-* I will share the links to the github repos where SQL materials are stored. You can download the materials from each link. 
+* Intro to R https://github.com/vindication09/Data-Science-Mathematics/blob/master/R-intro.pdf
+
+* I will share the links to the github repos where SQL materials are stored. You can download the materials from each link. I highly encourage you to get "The Language of SQL" by Larry Rockoff 
 
 ## Live Sessions
 Lessons for Live Sessions will be published online via rpubs. You can access them anytime using your web browser. Links to HW problems are posted at the end of each lesson. This section will continue to update as more lessons come out. Please check this section often for updates. Please see the lessons below: 
