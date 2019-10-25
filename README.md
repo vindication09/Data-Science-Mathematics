@@ -62,3 +62,5 @@ Lessons for Live Sessions will be published online via rpubs. You can access the
 * Probability, Session 2 https://rpubs.com/vharo00/541384
 
 ### SQL Basics 
+
+* SQL Basics, Session 1 https://github.com/vindication09/Data-Science-Mathematics/blob/master/SQL/SQL%20Session%20Training%201.pdf
