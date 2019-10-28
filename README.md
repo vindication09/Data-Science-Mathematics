@@ -23,6 +23,8 @@ EM-Editor: https://www.emeditor.com/
 
 * Complete the DIY SQL tutorial if you are unable to answer questions on the self diagnostic SQL test: https://www.w3schools.com/sql/
 
+* Additional Lectures on SQL https://www.youtube.com/watch?v=HXV3zeQKqGY
+
 * Once SQL tutorials have been complete, please become familiar with Google Big Query. There will be a more formal training but its good to become familiar early on. https://medium.com/google-cloud/getting-started-with-google-cloud-a-codelab-for-geohackweek-2017-848c25ed72fd
 
 If you are unable to complete math questions on the self diagnostic math test, you will stat with the Algebra lesson I have prepared. 
