@@ -2,7 +2,7 @@
 
 These are the course materials for the analytics module 1. Module 1 will cover  basic algebra, SQL Basics,  Probability I, and intro to r. Over the course of the next few weeks, I will create a github repo for module 2. Module 2 will cover Intro to Statistics, Intro to Python, and Matrix Algebra. 
 
-This github repo will contain all the materials for the Analytics Training Sessions pertaining to module 1. Please take some time to get familir with the layout of this repo. You will need to create your own personal github repo. Github will be ideal for sharing work and keeping sessions organized. We want to keep our workflow as self contained as possible. (Independent of sending attached documents) 
+This github repo will contain all the materials for the Analytics Training Sessions pertaining to module 1. Please take some time to get familir with the layout of this repo. You will need to create your own personal github repo. Github will be ideal for sharing work and keeping sessions organized. We want to keep our workflow as self contained as possible. (Independent of sending attached documents) You will need to use your own personal email to make your own github account. Directions are included in the getting started section.
 
 
 ## Getting Started 
