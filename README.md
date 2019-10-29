@@ -62,6 +62,7 @@ Lessons for Live Sessions will be published online via rpubs. You can access the
 
 * Probability, Session 1 https://rpubs.com/vharo00/520872
 * Probability, Session 2 https://rpubs.com/vharo00/541384
+* Probability, Session 3 http://rpubs.com/vharo00/544580
 
 ### SQL Basics 
 
