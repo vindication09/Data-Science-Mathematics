@@ -73,7 +73,7 @@ Lessons for Live Sessions will be published online via rpubs. You can access the
 
 I will continue to update the following section with the materials that will be covered in each training session. 
 
-* Session 1 (Algebra S1, SQL Basic S1)
-* Session 2 (Algebra S2, SQL Basics S2)
-* Session 3 (Algebra S3, SQL Basics S3)
-* Session 4 (algebra S4, SQL Basics S4)
+* Session 1 (SQL Basic S1)
+* Session 2 (Algebra S1, SQL Basics S2)
+* Session 3 (Algebra S2, SQL Basics S3)
+* Session 4 (algebra S3, SQL Basics S4)
