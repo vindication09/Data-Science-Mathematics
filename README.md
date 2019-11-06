@@ -11,7 +11,7 @@ You will be uploading your Homework Results to your personal github and sharing 
 
 * Please install Anaconda on your personal machines. Anaconda is a distributed system that includes an IDE to write r and python coding. Instructions here: https://www.anaconda.com/distribution/
 
-* If anaconda does not have r-studio, you will need to get it directly following these instructions https://courses.edx.org/courses/UTAustinX/UT.7.01x/3T2014/56c5437b88fa43cf828bff5371c6a924/
+* If anaconda does not have  r-studio, you will need to get r and r studio directly following these instructions https://courses.edx.org/courses/UTAustinX/UT.7.01x/3T2014/56c5437b88fa43cf828bff5371c6a924/
 
 * Please install a text editor. I personally like sublime text editor because it color codes the syntax according to detected language. Text editors allow you to write and format code
 sublime: https://www.sublimetext.com/
