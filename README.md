@@ -11,6 +11,8 @@ You will be uploading your Homework Results to your personal github and sharing 
 
 * Please install Anaconda on your personal machines. Anaconda is a distributed system that includes an IDE to write r and python coding. Instructions here: https://www.anaconda.com/distribution/
 
+* If anaconda does not have r-studio, you will need to get it directly following these instructions https://courses.edx.org/courses/UTAustinX/UT.7.01x/3T2014/56c5437b88fa43cf828bff5371c6a924/
+
 * Please install a text editor. I personally like sublime text editor because it color codes the syntax according to detected language. Text editors allow you to write and format code
 sublime: https://www.sublimetext.com/
 EM-Editor: https://www.emeditor.com/
@@ -27,7 +29,8 @@ EM-Editor: https://www.emeditor.com/
 
 * Once SQL tutorials have been complete, please become familiar with Google Big Query. There will be a more formal training but its good to become familiar early on. https://medium.com/google-cloud/getting-started-with-google-cloud-a-codelab-for-geohackweek-2017-848c25ed72fd
 
-If you are unable to complete math questions on the self diagnostic math test, you will stat with the Algebra lesson I have prepared. 
+* If you are unable to complete math questions on the self diagnostic math test, you will stat with the Algebra lesson I have prepared. 
+
 
 ## Materials
 
@@ -38,6 +41,8 @@ If you are unable to complete math questions on the self diagnostic math test, y
 * Intro to R https://github.com/vindication09/Data-Science-Mathematics/blob/master/R-intro.pdf
 
 * I will share the links to the github repos where SQL materials are stored. You can download the materials from each link. I highly encourage you to get "The Language of SQL" by Larry Rockoff 
+
+* If you are having difficulty downloading r and r studio, you can use this in the meantime. https://rdrr.io/snippets/
 
 ## Live Sessions
 Lessons for Live Sessions will be published online via rpubs. You can access them anytime using your web browser. Links to HW problems are posted at the end of each lesson. This section will continue to update as more lessons come out. Please check this section often for updates. Please see the lessons below: 
