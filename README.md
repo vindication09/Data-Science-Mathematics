@@ -67,7 +67,7 @@ Lessons for Live Sessions will be published online via rpubs. You can access the
 ### SQL Basics 
 
 * SQL Basics, Session 1 https://github.com/vindication09/Data-Science-Mathematics/blob/master/SQL/SQL%20Session%20Training%201.pdf
-* TBA (joins, foreign keys,one to one ,one to many)
+* SQL Basics, Session 2 https://github.com/vindication09/Data-Science-Mathematics/blob/master/SQL/SQL%20session%20training%202.pdf
 
 ## Lesson Distribution 
 
