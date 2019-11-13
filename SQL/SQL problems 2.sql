@@ -25,7 +25,7 @@ from
 select
 a.emp_id, 
 a.emp_name, 
-a.emp_rating, 
+b.emp_rating, 
 b.hr_evaluator_id
 from employees a  
 join evaluations b 
