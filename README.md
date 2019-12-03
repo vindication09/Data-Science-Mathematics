@@ -84,4 +84,4 @@ I will continue to update the following section with the materials that will be 
 * Session 2 (Algebra S1, SQL Basics S2)
 * Session 3 (GA Training)
 * Session 4 (algebra S2, SQL HW 1 Review)
-* Session 5 (algebra S3, SQL Basics S3)
+* Session 5 (algebra S3, SQL Basics S4)
