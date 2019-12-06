@@ -29,7 +29,7 @@ from employees
 
 ---q5)
 select 
-emp_id, emp_name, annual_salary, round(annual_salary*1.05,0) as bonus_awarded
+emp_id, emp_name, annual_salary, round(annual_salary*.05,0) as bonus_awarded
 from employees
 
 ---q6)
