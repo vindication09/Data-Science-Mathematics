@@ -19,15 +19,18 @@ from
 	from employees 
 	where department IN ('IT', 'analytics') 
 	)
+	
+--alternate 
+select AVG(annual_salary) from (select * from employees where department IN ('IT', 'analytics') ) 
 
 ---Q3) 
 ---in order to write joins, we need to create an alias 
 select
 a.emp_id, 
 a.emp_name, 
-b.emp_rating, 
+a.emp_rating, 
 b.hr_evaluator_id
-from employees a  
+from employees a
 join evaluations b 
 on (a.emp_id=b.emp_id)
 
