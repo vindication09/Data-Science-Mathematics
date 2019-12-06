@@ -15,9 +15,9 @@ from employees ;
 ---q3) 
 select
 employee_id, employee_name, age, annual_salary, tenure_yearsworked ----select variables 
-from employees #from what table 
-where age>30 #add condition 
-order by age desc; #add sorting condition 
+from employees ----#from what table 
+where age>30 ----#add condition 
+order by age desc; ----#add sorting condition 
 
 ---q4) 
 ---round(a,b)
