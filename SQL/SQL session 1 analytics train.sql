@@ -36,6 +36,7 @@ from employees
 --- wildcard % is a conditional statment 
 --if you know the start or ending of a value but not the whole value 
 ----('Tom%')
+---('Tom %')
 select
 emp_id emp_name, annual_salary
 from employees
