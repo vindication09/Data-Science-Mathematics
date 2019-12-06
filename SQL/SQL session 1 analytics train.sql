@@ -39,7 +39,7 @@ from employees
 select
 emp_id emp_name, annual_salary
 from employees
-where employee_name like ('Tom%')
+where employee_name like ('Tom %')
 
 ---If you know the exact value...
 select
