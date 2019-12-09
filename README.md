@@ -31,6 +31,7 @@ EM-Editor: https://www.emeditor.com/
 
 * If you are unable to complete math questions on the self diagnostic math test, you will stat with the Algebra lesson I have prepared. 
 
+* As additional reference, if you do not have access to BigQuery, there are open source playforms you can use. Here is the information for how to install mySQL https://towardsdatascience.com/learning-sql-the-hard-way-4173f11b26f1
 
 ## Materials
 
