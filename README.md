@@ -76,6 +76,7 @@ Lessons for Live Sessions will be published online via rpubs. You can access the
 * SQL Basics, Session 2 https://github.com/vindication09/Data-Science-Mathematics/blob/master/SQL/SQL%20session%20training%202.pdf
 * SQL Basics, Session 3 GA Training 
 * SQL Basics, Session 4 https://github.com/vindication09/Data-Science-Mathematics/blob/master/SQL/SQL%20Training%20Session%204.pdf
+* SQL Basics, Session 5 https://github.com/vindication09/Data-Science-Mathematics/blob/master/SQL/SQL%20Training%20Session%205.pdf
 
 ## Lesson Distribution 
 
@@ -86,3 +87,4 @@ I will continue to update the following section with the materials that will be 
 * Session 3 (GA Training)
 * Session 4 (algebra S2, SQL HW 1 Review)
 * Session 5 (algebra S3, SQL Basics S4)
+* Session 6, (Algebra S4, SQL Basics S5)
