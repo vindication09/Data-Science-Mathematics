@@ -35,6 +35,8 @@ EM-Editor: https://www.emeditor.com/
 
 * Please get started on the DIY tutorial for Python https://www.w3schools.com/python/default.asp
 
+* Download Python on corp machine https://github.com/vindication09/Data-Science-Mathematics/blob/master/Python/Anaconda_simple_setup.docx
+
 ## Materials
 
 * For Algebra, we will be using Pauls Online Math notes. These open source notes are a popular choice among undergraduates as complimentary material. http://tutorial.math.lamar.edu/
