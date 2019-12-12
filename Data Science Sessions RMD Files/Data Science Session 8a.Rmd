@@ -100,18 +100,7 @@ cosxcosy+cosxcosy=2cosxcosy\\
 2cosxcosy=2cosxcosy
 $$
 
-
-#Whats to come
-
-We did a crash course of the most fundamental topics in a standard pre-calculus curriculum. Going forward, we want to be able to apply our learnings to probability, calculus, and linear algebra. 
-
-This is the sequence of items we are going to look at going down the pipeline. 
-
-##Intro to Probability and Statistics
-##Intro to matrix algebra 
-##Intro to 1D calculus 
-
-
-
+Congratulations! 
+You completed the pre-calculus refresher course. Re-Take the CUNY diagostic test and you should be able to answer all the questions there. We proceed to the probability theory sessions. 
 
 

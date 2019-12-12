@@ -5,22 +5,20 @@ date: "June 18, 2019"
 output: html_document
 ---
 
-#Chapter 6 Intro to Trig 
+# Chapter 6 Intro to Trig 
 
-##Introduction to Trig
+## Introduction to Trig
 
 Our focus will now be applied to Trig. Here is your reading to get started on Trig: 
 https://github.com/vindication09/Data-Science-Mathematics/blob/master/trig_intro.pdf
 
-Trig is a branch of mathematics that studies the relationships between the sides lengths and angles within triangles. For our purposes, we want to get familiar with the unit circle, functions and their properties, angle measures, and identities. 
+Trig is a branch of mathematics that studies the relationships between the sides lengths and angles within triangles. For our purposes, we want to get familiar with the unit circle, functions and their properties such as angle measures and identities. 
 
 The first thing we want to get familiar with is the conversion of common radians to degrees. We have the following table: 
 
 $$
 \begin{bmatrix} Degrees & Radians \\ 0 & 0 \\ 30 & \pi /6 \\ 45 & \pi /4 \\ 60 & \pi /3 \\ 90 & \pi /2 \\ 180 & \pi  \\ 270 & 3\pi /2 \\ 360 & 2\pi  \end{bmatrix}
 $$
-
--Draw angles on whiteboard-
 
 These are typically the most common values we will be using to solve trig equations and re-write degrees in terms of radians or vice versa. In formal mathematics, we prefer to keep everything in terms of radians. 
 
@@ -37,7 +35,7 @@ $$
 2\pi(\frac{180}{\pi})=2(180)=360
 $$
 
-Each radian is actually the angle formed by a triangle inscribed inside of a circle where x is the length on the x axis and y is the height. The angle is the angle between the origin and the point of elevation. Please see whiteboard 
+Each radian is actually the angle formed by a triangle inscribed inside of a circle where x is the length on the x axis and y is the height. The angle is the angle between the origin and the point of elevation. Please see whiteboard (unit circle with inscribed traingles)
 
 $$
 x=cos\theta\\
@@ -94,7 +92,7 @@ There are also values that you will simply need some computation software to com
 
 ## Simple Right Triangle Trig 
 
-Perhaps in grade school, you have come across the phrase "Soh Cah Toa." It is meant to be a way for students to remember the relationship of the sides when and their corresponding trig funtions when it comes to right triangles. 
+Perhaps in grade school, you have come across the phrase "Soh Cah Toa." It is meant to be a way for students to remember the relationship of the right triangle sides and their corresponding trig funtions.
 
 Lets look at the whiteboard to identify the common names for the sides of the right triangle. 
 
@@ -104,7 +102,7 @@ Lets look at the whiteboard to identify the common names for the sides of the ri
 
 * Toa=Opp/Adj
 
-Some other properties about triangles is that the sum of angles is 180 degrees within a triangle. We also have a very special property called the triangle inequality which states that the sum of two sides of a triangle must be greater than or equal to the remaining sides. This is actually a critical property in mathematics that appears in the most advanced branches including the derivation of some machine learning algorithms. 
+Some other properties about triangles is that the sum of angles is 180 degrees within a triangle. We also have a very special property called the triangle inequality which states that the sum of two sides of a triangle must be greater than or equal to the remaining side. This is actually a critical property in mathematics that appears in the most advanced branches including the derivation of some machine learning algorithms. 
 
 Lets examine a simple problem:
 

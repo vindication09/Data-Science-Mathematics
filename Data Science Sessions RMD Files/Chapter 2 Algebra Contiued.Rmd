@@ -31,7 +31,7 @@ x+11=7y\\
 \frac{x+11}{7}=y
 $$
 
-We can now replace our newly derived expression for y, into the bottom equation and solve for x. After we replace our derived expression into the bottom equation, we will need to simplify by combining like terms,simplify reactions where possible, distribute as needed and get x alone. 
+We can now replace our newly derived expression for y, into the bottom equation and solve for x. After we replace our derived expression into the bottom equation, we will need to simplify by combining like terms also simplify fractions where possible and distribute as needed and get x alone. 
 
 $$
 5x+2y=-18\\
@@ -43,7 +43,7 @@ $$
 x=-4
 $$
 
-We have found that our value for for x is -4. We can plug -4 for x in any of the two equations from our original system to find the value for y. Lets use the bottom equation to find y. We still need to simplify and isolate y. 
+We have found that our value for x is -4. We can plug -4 for x in any of the two equations from our original system to find the value for y. Lets use the bottom equation to find y. We still need to simplify and isolate y. 
 
 $$
 5x+2y=-18\\
@@ -102,7 +102,7 @@ https://github.com/vindication09/Data-Science-Mathematics/blob/master/Alg_System
 
 ## Inequalities 
 
-As given in wikipedia, In mathematics, an inequality is a relation that holds between two values when they are different. The notation a ≠ b means that a is not equal to b. It does not say that one is greater than the other, or even that they can be compared in size. 
+As given in wikipedia, In mathematics, an inequality is a relation that holds between two values when they are different. The notation a ≠ b means that value a is not equal to value b. This notation does not say that one is greater than the other, or even that they can be compared in size. 
 
 Inequalities are important comparitive operators that are used often, for example, they are a common criteria for filtering in SQL using a WHERE statement. We solve inequalities the same way we solve equations, however a caveat is that when you divide or multiply both sides by a negative, then the direction of the inequality changes. Other than that, it is almost identical to solving regular equations. 
 
@@ -111,7 +111,7 @@ x+2>12\\
 x>10
 $$
 
-Thesolution that x>10 is saying that any value of x greater than 10 is a valid solution that makes this inequality true. 
+The solution that x>10 is saying that any value of x greater than 10 is a valid solution that makes this inequality true. 
 
 Inequalities can also ask you to find a range of possible values that are less than some value and greater than some other value like so. When it comes to something like this, you would still solve it using the same techniques we went over but apply them to the right and left side of the equation. 
 

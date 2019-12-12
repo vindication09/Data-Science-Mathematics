@@ -5,27 +5,27 @@ date: "April 25, 2019"
 output: html_document
 ---
 
-#Functions and more 
+##Functions and more 
 
-A function is a mathematical relationship between a set of inputs and outputs. Functions are subject to constraints such as a range or set of possible inputs in addition to a range of possible outputs. Functions are universally denoted as f(x). In some instances, f(x)= is interchangable with y=, it really just depends on the operations at hand. 
+A function is a mathematical relationship between a set of inputs and outputs. Functions are subject to constraints such as a set of possible inputs in addition to a range of possible outputs. Functions are universally denoted as f(x). In some instances, f(x)= is interchangable with y=, it really just depends on the operations at hand. 
 
-In our previous lessons, we examined mechanics but going forward, mecahnics will be a tool to work through more concrete concepts and their applications. 
+In our previous lessons, we examined mechanics of expressions but going forward, mecahnics will be a tool to work through more concrete concepts and their applications. 
 
 The idea of a function comes from a relation. A relation is simply a set of ordered pairs. Ordered pairs are represented with the notation (x,y) and typically when we have a set of ordered pairs, we require one value of x for each value of y. Lets look at some exampes:
 
 $$
 (-1, 0),(0,-3),(2, -3),(3,0), (4, 5)\\
-{x:}{-1,0,2,3,5}\\
+{x:}{-1,0,2,3,4}\\
 {y:}{0,-3,0,5}
 $$
 
-We split up our ordered pairs into their x components and y components. Notice in the y components, we omitt the additional -3. We have two distinct x values (0 and 2) that yield the y value of -3, however, we would no longer have a relation if the same x value yields two different y values such as the example below: 
+We split up our ordered pairs into their x components and y components. Notice in the y components, we omitt the additional -3. We have two distinct x values (0 and 2) that yield the y value of -3, however. Visually this can be read as there are two different points on the x axis that produce the same y value. We would no longer have a relation if the same x value yields two different y values such as the example below: 
 
 $$
 (6,10),(-7,3),(0,4),(6, -4)
 $$
 
-Without looking at the x and y components seperate, we can see that the x value of 6 yields a y value of 10 and -4. This contradicts the definition of a relation. 
+Without looking at the x and y components individually listed, we can see that the x value of 6 yields a y value of 10 and -4. This contradicts the definition of a relation. 
 
 This idea can be extended to functions in general. 
 
@@ -89,11 +89,22 @@ $$
 
 Try to plot this function yourself using classic pen and paper. There are more things to consider when graphing functions since they will not always be so simple as this example but those complicated examples will be for a later time. 
 
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+eq = function(x){x*x + 2}
+curve(eq, from=-5, to=5, xlab="x", ylab="y")
+```
+
 We will now bring our attention to piecewise functions. They are a different type of function that appear quite a bit in probability. Itis best to get familiar with this sort of notation now. A piecewise function is a function that is broken into pieces depending on the defined value of x.
 
 $$
 f\left( x \right) =|x|=\begin{cases} x\quad if\quad x\ge 0 \\ -x\quad if\quad x<0 \end{cases}
 $$
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+eq = function(x){abs(x)}
+curve(eq, from=-5, to=5, xlab="x", ylab="y")
+```
+
 
 The absolute value function is broken into two pieces. The first piece is x when x is greater than or equal to zero. The second piece is -x when x is less than 0. 
 
@@ -101,9 +112,10 @@ Now that we have introduced the framework of functions, we need to talk about th
 
 The domain is definied as the set of all possible input values for some f(x) and the range is the set of all possible y values we can obtain as outputs from f(x). 
 
-Finding the domain and range of a function requires some knowledge of elementary rules. Some of the most popular rules for functions are:
-1. The denominator of a fraction cannot be 0
-2. The inside of a square root cannot be less than 0 
+Finding the domain and range of a function requires some knowledge of elementary rules:
+* 1. The denominator of a fraction cannot be 0
+
+* 2. The inside of a square root cannot be less than 0 
 
 Lets look at some examples of how to find the domain while introducing the idea of interval notation. Finding the range is not as straight forward because it requires more advanced techniques to find the end behavior of a function. 
 

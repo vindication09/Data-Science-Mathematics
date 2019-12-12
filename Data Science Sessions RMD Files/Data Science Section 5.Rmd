@@ -12,7 +12,7 @@ output: html_document
 
 We will contibue our discussion with exponentials and logs by learning how to solve equations with these entities. 
 
-##Readings
+## Readings
 https://github.com/vindication09/Data-Science-Mathematics/blob/master/Alg_SolveExpEqns.pdf
 
 https://github.com/vindication09/Data-Science-Mathematics/blob/master/Alg_SolveLogEqns.pdf
@@ -20,7 +20,7 @@ https://github.com/vindication09/Data-Science-Mathematics/blob/master/Alg_SolveL
 https://github.com/vindication09/Data-Science-Mathematics/blob/master/Alg_ExpLogApplications.pdf
 
 
-#Solving Exponential Functions 
+### Solving Exponential Functions 
 
 We will first look at how to solve exponential equations. Before we begin, lets recall a property about exponents from the last session:
 
@@ -37,7 +37,7 @@ $$
 5^{3x}=5^{7x-2}
 $$
 
-We know that the base is equal on both sides of this equation,hence we can use the property to set the exponents of each side equal to each other as shown below. From here, you just solve the equation as any ordinary solve for x type problem. 
+We know that the base is equal on both sides of this equation, hence we can use the property to set the exponents of each side equal to each other as shown below. From here, you just solve the equation as any ordinary solve for x type problem. 
 
 $$
 3x=7x-2\\
@@ -45,7 +45,7 @@ $$
 x=\frac{-2}{-4}=\frac{1}{2}
 $$
 
-Not every problem will be this straight forward,lets examine a more difficult example and see how sometimes it will be required to do some re-writing of the base in order to use the property highlighted at the start of this session. 
+Not every problem will be this straight forward, lets examine a more difficult example and see how sometimes it will be required to do some re-writing of the base in order to use the property highlighted at the start of this session. 
 
 $$
 4^{5-9x}=\frac{1}{8^{x-2}}\\
@@ -111,7 +111,7 @@ x=6x-1\\
 -5x=-1\\
 x=\frac{1}{5}
 $$
-The log propeties also hold for the natural log ln as shown below. We will use property 6. If we have ln on both sides, then the base is the same on both sides. It is the number e. We will then needto dig back deeper and solve the resulting polynomial. 
+The log propeties also hold for the natural log ln as shown below. We will use property 6. If we have ln on both sides, then the base is the same on both sides. It is the number e. We will then need to dig back deeper and solve the resulting polynomial. 
 
 $$
 ln10-ln(7-x)=lnx\\

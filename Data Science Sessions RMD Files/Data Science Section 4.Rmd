@@ -5,15 +5,16 @@ date: "May 14, 2019"
 output: html_document
 ---
 
-#Chapter 4 Algebra Continued
+# Chapter 4 Algebra Continued
 
-##Exponential Function
+## Exponential Function
 
-A different kind of function; Today we will expand out knowledge of functions by introducing exponents and logarithms. These constructs appear frequently in probability theory so it is important to begin getting familiar with them and look at how they are used mechanically. 
+A different kind of function;
+Today we will expand out knowledge of functions by introducing exponents and logarithms. These constructs appear frequently in probability theory so it is important to begin getting familiar with them and look at how they are used mechanically. 
 
 Lets define the exponential function;
 
-If b is any number such that b>0 and b not equal to 1, then the exponential function is defined as 
+If b is any number such that $b>0$ and b not equal to 1, then the exponential function is defined as 
 
 $$
 f(x)=b^x
@@ -47,7 +48,7 @@ $$
 f(x)=2^x\\
 f(-2)=2^{-2}=\frac{1}{2^2}=\frac{1}{4}\\
 f(-1)=2^{-1}=\frac{1}{2^1}=\frac{1}{2}\\
-f(0)=2^0=\frac{1}{2^0}=\frac{1}{1}=1\\
+f(0)=2^0=1\\
 f(1)=2^1=2\\
 f(2)=2^2=4
 $$
@@ -96,20 +97,21 @@ b^x>0\\
 b^x\neq 0
 $$
 
-* If 0< b<1 then the graph of f(x) will decrease as we move from left to right. (Recall our example)
+* If $0< b<1$ then the graph of f(x) will decrease as we move from left to right. (Recall our example)
 
-* If b >1 then the graph of f(x) will increase as we move from left to right (Also recall above example)
+* If $b >1$ then the graph of f(x) will increase as we move from left to right (Also recall above example)
 
-* IF 
+Also consider the following:
 
 $$
+If \\
 b^x=b^y\\
 then\\
 x=y
 $$
 
 
-Now we are going to talk about most well known exponential function, in fact most people think of only this function when they talk about the exponential function. I am talking about the following: 
+Now we are going to talk about the most well known exponential function, in fact most people think of only this function when they talk about the exponential function. I am talking about the following: 
 
 $$
 f(x)=e^x
@@ -131,7 +133,7 @@ https://github.com/vindication09/Data-Science-Mathematics/blob/master/Alg_ExpFun
 ## Log Function 
 
 Lets start with the definition of the log function 
-If b is any number such that b > 0 and b ≠ 1 and x > 0 then,
+If b is any number such that $b > 0$ and $b ≠ 1$ and $x > 0$ then,
 
 $$
 y=log_bx\\

@@ -11,7 +11,7 @@ output:
 
 This is the first in a multi-part series covering mathematics for Data Science. The goal is for the user to be able to have the necessary toolset required to understand and exectute statistical analysis and more advanced Data Science practices such as machine learning. 
 
-## Pre-Requisite 
+## Pre-Req
 The user should be able to perform operations on fractions such as addition, subtraction, division, and multiplication. 
 
 ## Operations on Expressions 
@@ -315,15 +315,3 @@ We will be looking at systems of equations and inequalities
 
 
 
-##Part 2 of This Session: Basic SQL 
-
-We will be using data that has already been loaded into BQ tutorial_data. The tables of interest are console_dates and console_games. We have a historic list of games released from 1990 - 2015 and a list of console attributes. 
-
-We will be developing the following reports using legacy sql. 
-1. Calculate what percent of Global Sales were made in North america 
-2. Extract a view of the console game titles ordered by platform name in ascending order and year of release in descending order
-3.For each game title, extract the first four letters of the publishers name
-4.Display all console platforms which were released either just before Black Friday or just Christmas in 2014
-5. order platform by their longevity in ascending order 
-6.Demonstrate how to deal with the game_year column is client wants to convert it to different data type
-7.How would you deal with missing data in these files?

@@ -9,7 +9,7 @@ output: html_document
 
 We will continue our discussion into the second part of our trig introduction. We are going to cover solving trig equations. The motivation behind solving trig equations is to solve for the angle theta given the value of one of the six trig identities. 
 
-One element that sets solving for trig equations apart from solving regular trig equations is the fact that unless specified, we will be solving for all relating angles within the unit circle. We will go through this concept on th whiteboard since it is something that is easier to grasp visually than conceptually. 
+One element that sets solving trig equations apart from solving regular equations is the fact that unless specified, we will be solving for all relating angles within the unit circle. We will go through this concept on th whiteboard since it is something that is easier to grasp visually.
 
 Please see the full print out of the unit circle:
 https://github.com/vindication09/Data-Science-Mathematics/blob/master/unitcircle-letter.pdf
@@ -61,7 +61,7 @@ qplot(t,y,geom="path", xlab="", ylab="Sine wave")
 
 ```
 
-The sinx function is a repetative wave as shown in the above plot,howver we are going to go through the process of plotting it from scratch. This will help our understanding much more than seeing a computer generated plot.
+The sinx function is a wave as shown in the above plot, howver we are going to go through the process of plotting it from scratch. This will help our understanding much more than seeing a computer generated plot.
 
 Lets also take a look at the cosine function plot. 
 ```{r warning=FALSE, message=FALSE}
@@ -105,7 +105,7 @@ Y=cos(B(x+C))+D
 $$
 * A is the amplitude, which is the height of the wave
 
-* The period is 2pi/B,which means that the function goes from one peak to the next (a full cycle)
+* The period is 2pi/B, which means that the function goes from one peak to the next (a full cycle)
 
 * The partition is period/4,which means the length between points on our x axis 
 
