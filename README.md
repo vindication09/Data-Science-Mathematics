@@ -1,6 +1,6 @@
 # Foundations for Data Science-Mathematics (Module 1)
 
-These are the course materials for the analytics module 1. Module 1 will cover  basic algebra, SQL Basics,  Probability I, and intro to r. Over the course of the next few weeks, I will create a github repo for module 2. Module 2 will cover Intro to Statistics, Intro to Python, and Matrix Algebra. 
+These are the course materials for the analytics module 1. Module 1 will cover  basic algebra, SQL Basics,  Probability I, and intro to python. Over the course of the next few weeks, I will create a github repo for module 2. 
 
 This github repo will contain all the materials for the Analytics Training Sessions pertaining to module 1. Please take some time to get familir with the layout of this repo. You will need to create your own personal github repo. Github will be ideal for sharing work and keeping sessions organized. We want to keep our workflow as self contained as possible. (Independent of sending attached documents) You will need to use your own personal email to make your own github account. Directions are included in the getting started section.
 
@@ -32,6 +32,8 @@ EM-Editor: https://www.emeditor.com/
 * If you are unable to complete math questions on the self diagnostic math test, you will stat with the Algebra lesson I have prepared. 
 
 * As additional reference, if you do not have access to BigQuery, there are open source playforms you can use. Here is the information for how to install mySQL https://towardsdatascience.com/learning-sql-the-hard-way-4173f11b26f1
+
+* Please get started on the DIY tutorial for Python https://www.w3schools.com/python/default.asp
 
 ## Materials
 
@@ -88,3 +90,4 @@ I will continue to update the following section with the materials that will be 
 * Session 4 (algebra S2, SQL HW 1 Review)
 * Session 5 (algebra S3, SQL Basics S4)
 * Session 6, (Algebra S4, SQL Basics S5)
+* Session 7, (Algebra S1, Python S1)
