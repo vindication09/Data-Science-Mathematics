@@ -50,14 +50,14 @@ Lessons for Live Sessions will be published online via rpubs. You can access the
 
 ### Algebra 
 
-* Algebra Review, Session 1: http://rpubs.com/vharo00/541491
-* Algebra Review, Session 2: http://rpubs.com/vharo00/541494
-* Algebra Review, Session 3: https://rpubs.com/vharo00/490716
-* Algebra Review, Session 4: https://rpubs.com/vharo00/498215
-* Algebra Review, Session 5: https://rpubs.com/vharo00/502321
-* Algebra Review, Session 6: https://rpubs.com/vharo00/506224
-* Algebra Review, Session 7: https://rpubs.com/vharo00/508982
-* Algebra Review, Session 8: https://rpubs.com/vharo00/516156
+* Algebra Review, Session 1: https://rpubs.com/vharo00/559162
+* Algebra Review, Session 2: https://rpubs.com/vharo00/559167
+* Algebra Review, Session 3: https://rpubs.com/vharo00/559168
+* Algebra Review, Session 4: https://rpubs.com/vharo00/559172
+* Algebra Review, Session 5: https://rpubs.com/vharo00/559178
+* Algebra Review, Session 6: https://rpubs.com/vharo00/559183
+* Algebra Review, Session 7: https://rpubs.com/vharo00/559189
+* Algebra Review, Session 8: https://rpubs.com/vharo00/559190
 
 ### Intro to R 
 
