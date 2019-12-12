@@ -66,6 +66,10 @@ Lessons for Live Sessions will be published online via rpubs. You can access the
 * Intro to R, Session 1: https://rpubs.com/vharo00/506239
 * Intro to R, Session 2: https://rpubs.com/vharo00/509960
 
+### Intro to Python 
+
+* My First Program, Session 1 https://github.com/vindication09/Data-Science-Mathematics/blob/master/Python/MyFirstProgram.ipynb
+
 ### Probability Theory I
 
 * Probability, Session 1 https://rpubs.com/vharo00/520872
