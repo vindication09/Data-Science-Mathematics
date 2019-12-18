@@ -96,4 +96,4 @@ I will continue to update the following section with the materials that will be 
 * Session 4 (algebra S2, SQL HW 1 Review)
 * Session 5 (algebra S3, SQL Basics S4)
 * Session 6, (Algebra S4, SQL Basics S5)
-* Session 7, (Algebra S1, Python S1)
+* Session 7, (Algebra S5, Python S1)
