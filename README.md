@@ -71,6 +71,7 @@ Lessons for Live Sessions will be published online via rpubs. You can access the
 ### Intro to Python 
 
 * My First Program, Session 1 https://github.com/vindication09/Data-Science-Mathematics/blob/master/Python/MyFirstProgram.ipynb
+* Python Session 2 https://github.com/vindication09/Data-Science-Mathematics/blob/master/Python/Introduction%20to%20Python%2C%20Session%202.ipynb
 
 ### Probability Theory I
 
@@ -97,3 +98,5 @@ I will continue to update the following section with the materials that will be 
 * Session 5 (algebra S3, SQL Basics S4)
 * Session 6, (Algebra S4, SQL Basics S5)
 * Session 7, (Algebra S5, Python S1)
+* Session 8,  (Algebra S6, Python S2)
+* Session 8 (Alternate) Pat Presents some SQL Based work 
